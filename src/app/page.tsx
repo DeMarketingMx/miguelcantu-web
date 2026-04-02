@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, BarChart3, Target, TrendingUp, Brain, CheckCircle, GraduationCap, Award, BookOpen, Globe } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
-import { DecorativeChart } from "@/components/DecorativeChart";
+import { ROICalculator } from "@/components/demos/ROICalculator";
 import { BackgroundPattern } from "@/components/BackgroundPattern";
 import { FloatingParticles } from "@/components/FloatingParticles";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
@@ -155,37 +155,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Client growth chart */}
+      {/* ROI Calculator */}
       <section className="relative bg-surface px-6 py-20 overflow-hidden">
         <FloatingParticles count={10} />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
-            <div className="grid items-center gap-12 md:grid-cols-2">
-              <div>
-                <span className="section-badge">Resultados</span>
-                <h2 className="mb-6">Crecimiento en Adquisicion de Clientes</h2>
-                <p className="mb-6 text-text-muted leading-relaxed">
-                  Mis clientes ven resultados tangibles en los primeros meses.
-                  A traves de estrategias de marketing digital, SEO y campanas
-                  basadas en datos, aceleramos la adquisicion de clientes de
-                  forma sostenible.
-                </p>
-                <div className="grid grid-cols-3 gap-6">
-                  <AnimatedCounter end={40} suffix="+" label="Empresas" />
-                  <AnimatedCounter end={50} suffix="+" label="Proyectos" />
-                  <AnimatedCounter end={7} suffix="+" label="Anos" />
-                </div>
-              </div>
-              <div className="bg-surface p-6 border border-border shadow-sm">
-                <p className="text-xs text-text-muted uppercase tracking-wider mb-4">Adquisicion de clientes — Crecimiento anual</p>
-                <DecorativeChart />
-                <div className="flex justify-between mt-4 text-xs text-text-muted">
-                  <span>Enero</span>
-                  <span>Junio</span>
-                  <span>Diciembre</span>
-                </div>
-              </div>
+            <div className="text-center mb-10">
+              <span className="section-badge">Herramienta Interactiva</span>
+              <h2>Calcula el Retorno de tu Inversion en Marketing Digital</h2>
+              <p className="mt-4 mx-auto max-w-lg text-text-muted">
+                Selecciona tu industria y presupuesto mensual para estimar leads,
+                clientes nuevos y retorno de inversion esperado.
+              </p>
             </div>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <ROICalculator />
           </FadeIn>
         </div>
       </section>
