@@ -20,15 +20,15 @@ export function StrategyVisual() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  const cx = 200;
-  const cy = 175;
+  const cx = 250;
+  const cy = 220;
 
   // Draw radar rings
-  const rings = [50, 90, 130];
+  const rings = [60, 110, 160];
 
   return (
-    <div ref={ref} className="w-full max-w-[400px] mx-auto">
-      <svg viewBox="0 0 400 350" className="w-full h-auto">
+    <div ref={ref} className="w-full max-w-[500px] mx-auto">
+      <svg viewBox="0 0 500 440" className="w-full h-auto">
         {/* Radar rings */}
         {rings.map((r, i) => (
           <motion.circle
@@ -49,8 +49,8 @@ export function StrategyVisual() {
         {/* Axis lines */}
         {pillars.map((p, i) => {
           const rad = (p.angle * Math.PI) / 180;
-          const x2 = cx + 130 * Math.cos(rad);
-          const y2 = cy + 130 * Math.sin(rad);
+          const x2 = cx + 160 * Math.cos(rad);
+          const y2 = cy + 160 * Math.sin(rad);
           return (
             <motion.line
               key={`axis-${i}`}
@@ -73,7 +73,7 @@ export function StrategyVisual() {
           points={pillars
             .map((p) => {
               const rad = (p.angle * Math.PI) / 180;
-              const r = 70 + Math.random() * 40; // varied radius for visual interest
+              const r = 85 + Math.random() * 50; // varied radius for visual interest
               return `${cx + r * Math.cos(rad)},${cy + r * Math.sin(rad)}`;
             })
             .join(" ")}
@@ -90,8 +90,8 @@ export function StrategyVisual() {
         {/* Pillar labels */}
         {pillars.map((p, i) => {
           const rad = (p.angle * Math.PI) / 180;
-          const lx = cx + 150 * Math.cos(rad);
-          const ly = cy + 150 * Math.sin(rad);
+          const lx = cx + 185 * Math.cos(rad);
+          const ly = cy + 185 * Math.sin(rad);
           return (
             <motion.g
               key={`label-${i}`}
@@ -100,8 +100,8 @@ export function StrategyVisual() {
               transition={{ duration: 0.4, delay: 0.6 + i * 0.1 }}
             >
               <circle
-                cx={cx + 130 * Math.cos(rad)}
-                cy={cy + 130 * Math.sin(rad)}
+                cx={cx + 160 * Math.cos(rad)}
+                cy={cy + 160 * Math.sin(rad)}
                 r={5}
                 fill="var(--color-accent)"
               />
@@ -109,7 +109,7 @@ export function StrategyVisual() {
                 x={lx}
                 y={ly + 4}
                 textAnchor="middle"
-                fontSize={9}
+                fontSize={11}
                 fontWeight={600}
                 fill="var(--color-primary)"
                 style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
@@ -124,7 +124,7 @@ export function StrategyVisual() {
         <motion.circle
           cx={cx}
           cy={cy}
-          r={22}
+          r={28}
           fill="var(--color-accent)"
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : {}}
@@ -135,7 +135,7 @@ export function StrategyVisual() {
           y={cy + 1}
           textAnchor="middle"
           dominantBaseline="middle"
-          fontSize={8}
+          fontSize={10}
           fontWeight={700}
           fill="#FFFFFF"
           style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}

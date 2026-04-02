@@ -18,9 +18,9 @@ export function NeuralNetwork({ centerLabel, nodes }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  const cx = 200;
-  const cy = 175;
-  const radius = 130;
+  const cx = 250;
+  const cy = 220;
+  const radius = 160;
 
   const positions: Node[] = nodes.map((label, i) => {
     const angle = (2 * Math.PI * i) / nodes.length - Math.PI / 2;
@@ -32,8 +32,8 @@ export function NeuralNetwork({ centerLabel, nodes }: Props) {
   });
 
   return (
-    <div ref={ref} className="w-full max-w-[400px] mx-auto">
-      <svg viewBox="0 0 400 350" className="w-full h-auto">
+    <div ref={ref} className="w-full max-w-[500px] mx-auto">
+      <svg viewBox="0 0 500 440" className="w-full h-auto">
         {/* Connection lines */}
         {positions.map((node, i) => (
           <motion.line
@@ -83,16 +83,16 @@ export function NeuralNetwork({ centerLabel, nodes }: Props) {
             <circle
               cx={node.x}
               cy={node.y}
-              r={8}
+              r={10}
               fill="var(--color-surface)"
               stroke="var(--color-accent)"
               strokeWidth={2}
             />
             <text
               x={node.x}
-              y={node.y + 22}
+              y={node.y + 26}
               textAnchor="middle"
-              fontSize={9}
+              fontSize={11}
               fontWeight={600}
               fill="var(--color-primary)"
               style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
@@ -106,7 +106,7 @@ export function NeuralNetwork({ centerLabel, nodes }: Props) {
         <motion.circle
           cx={cx}
           cy={cy}
-          r={35}
+          r={42}
           fill="none"
           stroke="var(--color-accent)"
           strokeWidth={1}
@@ -120,7 +120,7 @@ export function NeuralNetwork({ centerLabel, nodes }: Props) {
         <motion.circle
           cx={cx}
           cy={cy}
-          r={28}
+          r={34}
           fill="var(--color-accent)"
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : {}}
@@ -131,7 +131,7 @@ export function NeuralNetwork({ centerLabel, nodes }: Props) {
           y={cy + 1}
           textAnchor="middle"
           dominantBaseline="middle"
-          fontSize={10}
+          fontSize={12}
           fontWeight={700}
           fill="#FFFFFF"
           style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}

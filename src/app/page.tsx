@@ -3,6 +3,7 @@ import { ArrowRight, BarChart3, Target, TrendingUp, Brain, CheckCircle, Graduati
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { DecorativeChart } from "@/components/DecorativeChart";
 import { BackgroundPattern } from "@/components/BackgroundPattern";
+import { FloatingParticles } from "@/components/FloatingParticles";
 import { FadeIn } from "@/components/FadeIn";
 
 const services = [
@@ -60,6 +61,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative bg-surface overflow-hidden">
+        <FloatingParticles count={25} />
         <BackgroundPattern variant="dots" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <FadeIn>
@@ -105,16 +107,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats bar */}
-      <section className="border-y border-border bg-surface">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-8 px-6 py-12 md:grid-cols-4">
-          <AnimatedCounter end={7} suffix="+" label="Anos de experiencia" />
-          <AnimatedCounter end={40} suffix="+" label="Empresas asesoradas" />
-          <AnimatedCounter end={50} suffix="+" label="Proyectos completados" />
-          <AnimatedCounter end={2} label="Maestrias" />
-        </div>
-      </section>
-
       {/* Credentials bar */}
       <section className="bg-primary px-6 py-8">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8 md:justify-between">
@@ -132,6 +124,7 @@ export default function Home() {
 
       {/* Services */}
       <section className="relative px-6 py-20 overflow-hidden">
+        <FloatingParticles count={15} color="primary" />
         <BackgroundPattern variant="grid" />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
@@ -162,8 +155,9 @@ export default function Home() {
       </section>
 
       {/* Client growth chart */}
-      <section className="bg-surface px-6 py-20">
-        <div className="mx-auto max-w-[1200px]">
+      <section className="relative bg-surface px-6 py-20 overflow-hidden">
+        <FloatingParticles count={10} />
+        <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="grid items-center gap-12 md:grid-cols-2">
               <div>
@@ -176,21 +170,12 @@ export default function Home() {
                   forma sostenible.
                 </p>
                 <div className="grid grid-cols-3 gap-6">
-                  <div>
-                    <p className="font-heading text-2xl font-bold text-primary">40+</p>
-                    <p className="text-xs text-text-muted uppercase tracking-wider">Empresas</p>
-                  </div>
-                  <div>
-                    <p className="font-heading text-2xl font-bold text-primary">50+</p>
-                    <p className="text-xs text-text-muted uppercase tracking-wider">Proyectos</p>
-                  </div>
-                  <div>
-                    <p className="font-heading text-2xl font-bold text-primary">7+</p>
-                    <p className="text-xs text-text-muted uppercase tracking-wider">Anos</p>
-                  </div>
+                  <AnimatedCounter end={40} suffix="+" label="Empresas" />
+                  <AnimatedCounter end={50} suffix="+" label="Proyectos" />
+                  <AnimatedCounter end={7} suffix="+" label="Anos" />
                 </div>
               </div>
-              <div className="bg-surface p-6 border border-border">
+              <div className="bg-surface p-6 border border-border shadow-sm">
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-4">Adquisicion de clientes — Crecimiento anual</p>
                 <DecorativeChart />
                 <div className="flex justify-between mt-4 text-xs text-text-muted">
@@ -204,9 +189,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certified knowledge section - Navy */}
-      <section className="section-navy px-6 py-20">
-        <div className="mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
+      {/* Certified knowledge - Navy */}
+      <section className="section-navy relative px-6 py-20 overflow-hidden">
+        <FloatingParticles count={12} color="accent" />
+        <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn direction="left">
             <div className="aspect-[4/3] bg-navy-light flex items-center justify-center">
               <div className="text-center text-white/30 px-8">
@@ -238,46 +224,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA - Full width redesign */}
-      <section className="relative overflow-hidden">
-        <div className="bg-primary">
-          <div className="mx-auto max-w-[1200px] grid items-center gap-12 px-6 py-20 md:grid-cols-2">
-            <FadeIn>
-              <span className="section-badge section-badge-white">Siguiente Paso</span>
-              <h2 className="text-white mb-6">
-                ¿Listo para Transformar tu Empresa?
-              </h2>
-              <p className="text-white/60 mb-8 leading-relaxed">
-                Agenda una consulta sin compromiso. Hablemos de donde esta tu
-                empresa hoy y disenemos juntos la estrategia digital que
-                necesitas para llegar a donde quieres.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contacto" className="btn btn-white">
-                  Agendar Consulta
-                  <ArrowRight size={16} />
-                </Link>
-                <Link href="/sobre-mi" className="btn border-2 border-white/30 text-white hover:bg-white/10">
-                  Conoce Mi Trayectoria
-                </Link>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.2} direction="right">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { number: "7+", label: "Anos de experiencia" },
-                  { number: "40+", label: "Empresas asesoradas" },
-                  { number: "50+", label: "Proyectos completados" },
-                  { number: "2", label: "Maestrias" },
-                ].map((s) => (
-                  <div key={s.label} className="bg-white/5 border border-white/10 p-6 text-center">
-                    <p className="font-heading text-3xl font-bold text-white">{s.number}</p>
-                    <p className="text-xs text-white/50 uppercase tracking-wider mt-1">{s.label}</p>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
+      {/* CTA - Different visual from footer */}
+      <section className="relative px-6 py-24 overflow-hidden">
+        <BackgroundPattern variant="lines" />
+        <FloatingParticles count={18} />
+        <div className="relative mx-auto max-w-[800px] text-center">
+          <FadeIn>
+            <span className="section-badge">Hablemos</span>
+            <h2 className="mb-6">¿Listo para Crecer con Estrategia Digital?</h2>
+            <p className="mx-auto mb-10 max-w-lg text-text-muted leading-relaxed">
+              Agenda una consulta sin compromiso. Hablemos de donde esta tu
+              empresa hoy y disenemos juntos el camino hacia donde quieres llegar.
+            </p>
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Link href="/contacto" className="btn btn-primary">
+                Agendar Consulta
+                <ArrowRight size={16} />
+              </Link>
+              <Link href="/sobre-mi" className="btn btn-outline">
+                Conocer mi Trayectoria
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </>
