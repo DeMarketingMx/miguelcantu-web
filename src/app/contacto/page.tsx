@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Mail, MapPin, Clock, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -7,115 +8,148 @@ export const metadata: Metadata = {
     "Agenda una consulta con Miguel Cantu. Transformacion digital estrategica para tu empresa.",
 };
 
+const contactInfo = [
+  {
+    icon: Mail,
+    title: "Email",
+    value: "contacto@miguelcantu.mba",
+  },
+  {
+    icon: Phone,
+    title: "Telefono",
+    value: "+52 (81) XXXX-XXXX",
+  },
+  {
+    icon: MapPin,
+    title: "Ubicacion",
+    value: "Monterrey, Mexico",
+  },
+  {
+    icon: Clock,
+    title: "Horario",
+    value: "Lun - Vie: 9:00 - 18:00",
+  },
+];
+
 export default function Contacto() {
   return (
-    <section className="px-6 py-20">
-      <div className="mx-auto max-w-[800px]">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
-          Contacto
+    <>
+      {/* Page Header */}
+      <div className="page-header">
+        <h1>Contacto</h1>
+        <p className="breadcrumb">
+          <Link href="/">Home</Link>
+          <span className="mx-2">/</span>
+          <span>Contacto</span>
         </p>
-        <h1 className="mb-4">Hablemos</h1>
-        <p className="mb-12 max-w-lg text-lg text-text-muted">
-          ¿Tienes un proyecto de transformacion digital en mente? Agenda una
-          consulta sin compromiso.
-        </p>
+      </div>
 
-        {/* Contact form */}
-        <form className="space-y-6 rounded-[var(--radius-xl)] bg-surface p-8 shadow-md">
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <label
-                htmlFor="name"
-                className="mb-2 block text-sm font-semibold text-primary"
-              >
-                Nombre
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                className="w-full rounded-[var(--radius-md)] border border-border bg-background px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
-                placeholder="Tu nombre"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-2 block text-sm font-semibold text-primary"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="w-full rounded-[var(--radius-md)] border border-border bg-background px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
-                placeholder="tu@empresa.com"
-              />
-            </div>
-          </div>
-
+      <section className="px-6 py-20">
+        <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-2">
+          {/* Left - Info */}
           <div>
-            <label
-              htmlFor="company"
-              className="mb-2 block text-sm font-semibold text-primary"
-            >
-              Empresa
-            </label>
-            <input
-              id="company"
-              name="company"
-              type="text"
-              className="w-full rounded-[var(--radius-md)] border border-border bg-background px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
-              placeholder="Nombre de tu empresa"
-            />
-          </div>
+            <span className="section-badge">Contacto</span>
+            <h2 className="mb-4">
+              Hablemos de tu Proyecto Digital
+            </h2>
+            <p className="mb-10 text-text-muted leading-relaxed">
+              ¿Tienes un proyecto de transformacion digital en mente? Agenda una
+              consulta sin compromiso y exploremos juntos las oportunidades.
+            </p>
 
-          <div>
-            <label
-              htmlFor="message"
-              className="mb-2 block text-sm font-semibold text-primary"
-            >
-              Mensaje
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              required
-              className="w-full resize-none rounded-[var(--radius-md)] border border-border bg-background px-4 py-3 text-sm text-primary outline-none transition-colors focus:border-accent"
-              placeholder="Cuentame sobre tu proyecto o necesidad..."
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full rounded-[var(--radius-md)] bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover sm:w-auto"
-          >
-            Enviar mensaje
-          </button>
-        </form>
-
-        {/* Contact info */}
-        <div className="mt-12 flex flex-col gap-6 sm:flex-row sm:gap-12">
-          <div className="flex items-start gap-3">
-            <Mail size={20} className="mt-0.5 text-accent" />
-            <div>
-              <p className="text-sm font-semibold text-primary">Email</p>
-              <p className="text-sm text-text-muted">contacto@miguelcantu.mba</p>
+            <div className="grid grid-cols-2 gap-6">
+              {contactInfo.map((c) => (
+                <div
+                  key={c.title}
+                  className="bg-surface p-5 shadow-sm border border-border"
+                >
+                  <c.icon size={24} className="mb-3 text-accent" strokeWidth={1.5} />
+                  <p className="text-sm font-semibold text-primary">{c.title}</p>
+                  <p className="mt-1 text-sm text-text-muted">{c.value}</p>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="flex items-start gap-3">
-            <MapPin size={20} className="mt-0.5 text-accent" />
-            <div>
-              <p className="text-sm font-semibold text-primary">Ubicacion</p>
-              <p className="text-sm text-text-muted">Monterrey, Mexico</p>
-            </div>
+
+          {/* Right - Form */}
+          <div className="bg-surface p-8 shadow-md">
+            <h3 className="mb-6 text-xl">Envia tu Mensaje</h3>
+            <form className="space-y-5">
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
+                  >
+                    Nombre
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    className="input-minimal"
+                    placeholder="Tu nombre"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    className="input-minimal"
+                    placeholder="tu@empresa.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="subject"
+                  className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
+                >
+                  Asunto
+                </label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  className="input-minimal"
+                  placeholder="Asunto de tu mensaje"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
+                >
+                  Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  className="input-minimal resize-none"
+                  placeholder="Cuentame sobre tu proyecto..."
+                />
+              </div>
+
+              <button type="submit" className="btn btn-primary w-full sm:w-auto">
+                Enviar Mensaje
+              </button>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
