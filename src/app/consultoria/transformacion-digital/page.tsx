@@ -58,7 +58,7 @@ export default function TransformacionDigital() {
 
       {/* Intro with neural network */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="waves" />
+        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn>
             <span className="section-badge">Transformacion Digital</span>
@@ -83,8 +83,16 @@ export default function TransformacionDigital() {
       {/* Ribbon */}
       <section className="bg-primary px-6 py-8">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8 md:justify-between">
-          {["Tecnologia", "Personas", "Procesos", "Digitalizacion"].map((s) => (
-            <span key={s} className="text-sm font-semibold text-white/80">{s}</span>
+          {[
+            { icon: Cpu, label: "Tecnologia" },
+            { icon: Users, label: "Personas" },
+            { icon: Workflow, label: "Procesos" },
+            { icon: Layers, label: "Digitalizacion" },
+          ].map((s) => (
+            <div key={s.label} className="flex items-center gap-2">
+              <s.icon size={16} className="text-accent" strokeWidth={1.5} />
+              <span className="text-sm font-semibold text-white/80">{s.label}</span>
+            </div>
           ))}
         </div>
       </section>

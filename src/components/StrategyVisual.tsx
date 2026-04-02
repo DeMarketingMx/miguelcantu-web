@@ -127,7 +127,7 @@ export function StrategyVisual() {
         <motion.circle
           cx={cx}
           cy={cy}
-          r={28}
+          r={38}
           fill="var(--color-accent)"
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : {}}

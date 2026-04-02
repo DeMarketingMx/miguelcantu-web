@@ -79,15 +79,23 @@ export default function EstrategiaDigital() {
       {/* Ribbon */}
       <section className="bg-primary px-6 py-8">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8 md:justify-between">
-          {["Incremento de Visibilidad", "Posicionamiento de Marca", "Reconocimiento", "Autoridad"].map((s) => (
-            <span key={s} className="text-sm font-semibold text-white/80">{s}</span>
+          {[
+            { icon: Globe, label: "Visibilidad" },
+            { icon: Compass, label: "Posicionamiento" },
+            { icon: Lightbulb, label: "Reconocimiento" },
+            { icon: Gauge, label: "Autoridad" },
+          ].map((s) => (
+            <div key={s.label} className="flex items-center gap-2">
+              <s.icon size={16} className="text-accent" strokeWidth={1.5} />
+              <span className="text-sm font-semibold text-white/80">{s.label}</span>
+            </div>
           ))}
         </div>
       </section>
 
       {/* Interactive Demo */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="waves" />
+        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-10">

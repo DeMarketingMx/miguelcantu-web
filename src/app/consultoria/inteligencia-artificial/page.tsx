@@ -43,10 +43,10 @@ const businessAreas = [
 ];
 
 const aiModels = [
-  { name: "Clusters", description: "Segmentacion automatica de clientes" },
-  { name: "RFM", description: "Recencia, Frecuencia, Monetario" },
-  { name: "ARIMA", description: "Prediccion de series de tiempo" },
-  { name: "NLP", description: "Procesamiento de lenguaje natural" },
+  { name: "Clusters", description: "Segmentacion automatica", icon: Database },
+  { name: "RFM", description: "Recencia, Frecuencia, Monetario", icon: Brain },
+  { name: "ARIMA", description: "Prediccion de series de tiempo", icon: Zap },
+  { name: "NLP", description: "Lenguaje natural", icon: MessageSquare },
 ];
 
 export default function InteligenciaArtificial() {
@@ -65,7 +65,7 @@ export default function InteligenciaArtificial() {
 
       {/* Intro with AI network */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="waves" />
+        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn>
             <span className="section-badge">Inteligencia Artificial</span>
@@ -95,9 +95,12 @@ export default function InteligenciaArtificial() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-10 md:justify-between">
             {aiModels.map((m) => (
-              <div key={m.name} className="text-center">
-                <p className="text-xl font-heading font-bold text-white">{m.name}</p>
-                <p className="text-xs text-white/50 mt-1">{m.description}</p>
+              <div key={m.name} className="flex items-center gap-3">
+                <m.icon size={18} className="text-accent" strokeWidth={1.5} />
+                <div>
+                  <p className="text-base font-heading font-bold text-white">{m.name}</p>
+                  <p className="text-xs text-white/50">{m.description}</p>
+                </div>
               </div>
             ))}
           </div>

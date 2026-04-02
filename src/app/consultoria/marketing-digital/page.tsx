@@ -81,15 +81,24 @@ export default function MarketingDigital() {
       {/* Ribbon */}
       <section className="bg-primary px-6 py-8">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8 md:justify-between">
-          {["SEO", "SEM / PPC", "Analitica", "Sitio Web", "Redes Sociales"].map((s) => (
-            <span key={s} className="text-sm font-semibold text-white/80">{s}</span>
+          {[
+            { icon: Search, label: "SEO" },
+            { icon: Target, label: "SEM / PPC" },
+            { icon: BarChart3, label: "Analitica" },
+            { icon: PenTool, label: "Sitio Web" },
+            { icon: TrendingUp, label: "Redes Sociales" },
+          ].map((s) => (
+            <div key={s.label} className="flex items-center gap-2">
+              <s.icon size={16} className="text-accent" strokeWidth={1.5} />
+              <span className="text-sm font-semibold text-white/80">{s.label}</span>
+            </div>
           ))}
         </div>
       </section>
 
       {/* Interactive Demo */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="waves" />
+        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-10">

@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* Services */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="waves" />
+        <AnimatedBackground variant="grid" />
         <FloatingParticles count={15} color="primary" />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>

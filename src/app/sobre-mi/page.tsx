@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, GraduationCap, Award, BookOpen, CheckCircle, Globe } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
-import { BackgroundPattern } from "@/components/BackgroundPattern";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
@@ -125,7 +125,7 @@ export default function SobreMi() {
 
       {/* Bio */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <BackgroundPattern variant="dots" />
+        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn>
             <div className="aspect-[3/4] bg-navy/90 flex items-center justify-center">
@@ -192,7 +192,7 @@ export default function SobreMi() {
 
       {/* Values */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <BackgroundPattern variant="grid" />
+        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-14">
