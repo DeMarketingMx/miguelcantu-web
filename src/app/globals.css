@@ -215,3 +215,39 @@ h4, h5, h6 {
 .input-minimal::placeholder {
   color: var(--color-text-muted);
 }
+
+/* Legal page prose */
+.prose-legal h2 {
+  font-family: var(--font-heading), serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-legal p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  max-width: 65ch;
+}
+
+.prose-legal ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose-legal li {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 0.375rem;
+  list-style-type: disc;
+}
+
+.prose-legal strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}

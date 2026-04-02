@@ -16,9 +16,9 @@ const navLinks = [
 ];
 
 const legalLinks = [
-  { href: "#", label: "Politica de Privacidad" },
-  { href: "#", label: "Terminos y Condiciones" },
-  { href: "#", label: "Aviso Legal" },
+  { href: "/politica-de-privacidad", label: "Politica de Privacidad" },
+  { href: "/terminos-y-condiciones", label: "Terminos y Condiciones" },
+  { href: "/aviso-legal", label: "Aviso Legal" },
 ];
 
 export function Footer() {
