@@ -104,14 +104,14 @@ export default function Home() {
       </section>
 
       {/* Credentials bar */}
-      <section className="bg-primary px-6 py-8">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-8 md:justify-between">
+      <section className="bg-primary px-6 py-6 overflow-x-auto">
+        <div className="mx-auto flex max-w-[1200px] items-center gap-6 md:justify-between min-w-max md:min-w-0">
           {credentials.map((c) => (
-            <div key={c.title} className="flex items-center gap-3">
-              <c.icon size={20} className="text-accent" strokeWidth={1.5} />
+            <div key={c.title} className="flex items-center gap-2.5 shrink-0">
+              <c.icon size={18} className="text-accent" strokeWidth={1.5} />
               <div>
-                <p className="text-sm font-semibold text-white">{c.title}</p>
-                <p className="text-xs text-white/50">{c.subtitle}</p>
+                <p className="text-xs font-semibold text-white whitespace-nowrap">{c.title}</p>
+                <p className="text-[10px] text-white/50 whitespace-nowrap">{c.subtitle}</p>
               </div>
             </div>
           ))}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail, MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -10,16 +10,6 @@ export const metadata: Metadata = {
 };
 
 const contactInfo = [
-  {
-    icon: Mail,
-    title: "Email",
-    value: "contacto@miguelcantu.mba",
-  },
-  {
-    icon: Phone,
-    title: "Telefono",
-    value: "+52 (81) XXXX-XXXX",
-  },
   {
     icon: MapPin,
     title: "Ubicacion",

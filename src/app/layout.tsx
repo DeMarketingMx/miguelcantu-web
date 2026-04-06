@@ -40,6 +40,13 @@ export const metadata: Metadata = {
     title: "Miguel Cantu — Consultor en Marketing Digital y Transformacion Digital",
     description:
       "Consultoria estrategica en marketing digital, transformacion digital e inteligencia artificial para empresas que quieren crecer con claridad.",
+    images: [{ url: "/miguel-hero.png", width: 1200, height: 630, alt: "Miguel Cantu - Consultor Digital" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Miguel Cantu — Consultor en Marketing Digital y Transformacion Digital",
+    description: "Consultoria estrategica en marketing digital, transformacion digital e IA.",
+    images: ["/miguel-hero.png"],
   },
 };
 

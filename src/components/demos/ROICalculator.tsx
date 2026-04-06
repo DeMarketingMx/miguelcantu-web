@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export function ROICalculator() {
-  const [investment, setInvestment] = useState(30000);
+  const [serviceCost, setServiceCost] = useState(15000);
+  const [adBudget, setAdBudget] = useState(15000);
   const [industry, setIndustry] = useState("services");
 
   const multipliers: Record<string, { cpl: number; closeRate: number; avgTicket: number; label: string }> = {
@@ -16,15 +17,17 @@ export function ROICalculator() {
   };
 
   const m = multipliers[industry];
-  const leads = Math.round(investment / m.cpl);
+  const totalInvestment = serviceCost + adBudget;
+  const leads = Math.round(adBudget / m.cpl);
   const clients = Math.max(1, Math.round(leads * (m.closeRate / 100)));
   const revenue = clients * m.avgTicket;
-  const roi = Math.round(((revenue - investment) / investment) * 100);
+  const roi = Math.round(((revenue - totalInvestment) / totalInvestment) * 100);
 
   return (
     <div className="bg-surface border border-border p-8">
       <h3 className="text-lg font-semibold text-primary mb-1">Calculadora de ROI en Marketing Digital</h3>
-      <p className="text-sm text-text-muted mb-8">Estima el retorno de inversion basado en tu industria y presupuesto mensual.</p>
+      <p className="text-sm text-text-muted mb-2">Estima el retorno de inversion basado en tu industria y presupuesto mensual.</p>
+      <p className="text-xs text-text-muted/60 italic mb-8">* Esto es un ejemplo ilustrativo. Los resultados reales varian segun la estrategia, mercado y ejecucion.</p>
 
       <div className="grid gap-10 md:grid-cols-2">
         {/* Controls */}
@@ -50,21 +53,41 @@ export function ROICalculator() {
 
           <div>
             <div className="flex justify-between mb-2">
-              <label className="text-xs font-semibold uppercase tracking-wider text-primary">Inversion mensual (MXN)</label>
-              <span className="text-sm font-bold text-accent">${investment.toLocaleString()}</span>
+              <label className="text-xs font-semibold uppercase tracking-wider text-primary">Costo del servicio mensual</label>
+              <span className="text-sm font-bold text-accent">${serviceCost.toLocaleString()}</span>
             </div>
             <input
               type="range"
               min={5000}
-              max={200000}
-              step={5000}
-              value={investment}
-              onChange={(e) => setInvestment(Number(e.target.value))}
+              max={50000}
+              step={1000}
+              value={serviceCost}
+              onChange={(e) => setServiceCost(Number(e.target.value))}
               className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent"
             />
             <div className="flex justify-between text-xs text-text-muted mt-1">
               <span>$5,000</span>
-              <span>$200,000</span>
+              <span>$50,000</span>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between mb-2">
+              <label className="text-xs font-semibold uppercase tracking-wider text-primary">Inversion en publicidad</label>
+              <span className="text-sm font-bold text-accent">${adBudget.toLocaleString()}</span>
+            </div>
+            <input
+              type="range"
+              min={5000}
+              max={50000}
+              step={1000}
+              value={adBudget}
+              onChange={(e) => setAdBudget(Number(e.target.value))}
+              className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent"
+            />
+            <div className="flex justify-between text-xs text-text-muted mt-1">
+              <span>$5,000</span>
+              <span>$50,000</span>
             </div>
           </div>
 
@@ -90,10 +113,21 @@ export function ROICalculator() {
         {/* Results */}
         <div className="flex flex-col justify-between">
           <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="border border-border p-4">
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Servicio</p>
+                <p className="text-lg font-heading font-bold text-primary">${serviceCost.toLocaleString()}</p>
+              </div>
+              <div className="border border-border p-4">
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Publicidad</p>
+                <p className="text-lg font-heading font-bold text-primary">${adBudget.toLocaleString()}</p>
+              </div>
+            </div>
+
             <div className="flex items-end gap-6">
               <div>
-                <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Inversion</p>
-                <p className="text-2xl font-heading font-bold text-primary">${investment.toLocaleString()}</p>
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Inversion total</p>
+                <p className="text-2xl font-heading font-bold text-primary">${totalInvestment.toLocaleString()}</p>
               </div>
               <div className="text-2xl text-text-muted font-light">→</div>
               <div>
@@ -147,7 +181,7 @@ export function ROICalculator() {
               <div className="relative h-3 bg-border">
                 <motion.div
                   className="absolute inset-y-0 left-0 bg-primary/30"
-                  animate={{ width: `${Math.min((investment / revenue) * 100, 100)}%` }}
+                  animate={{ width: `${Math.min((totalInvestment / revenue) * 100, 100)}%` }}
                   transition={{ duration: 0.5 }}
                 />
                 <motion.div
@@ -161,13 +195,9 @@ export function ROICalculator() {
           </div>
 
           <div className="mt-6 p-4 bg-accent-light border border-accent/20">
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Proyeccion</p>
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Proyeccion ilustrativa</p>
             <p className="text-sm text-primary">
-              {roi > 200
-                ? `Con una inversion de $${investment.toLocaleString()} mensuales en ${m.label.toLowerCase()}, el retorno estimado es de ${roi}%. Una estrategia bien ejecutada puede multiplicar esta inversion significativamente.`
-                : roi > 50
-                  ? `La inversion de $${investment.toLocaleString()} en ${m.label.toLowerCase()} genera un ROI estimado del ${roi}%. Optimizar la tasa de conversion puede mejorar estos resultados.`
-                  : `Para ${m.label.toLowerCase()}, una inversion de $${investment.toLocaleString()} genera un retorno conservador. Aumentar el presupuesto o mejorar la conversion puede amplificar los resultados.`}
+              Con una inversion de ${totalInvestment.toLocaleString()} mensuales (${serviceCost.toLocaleString()} servicio + ${adBudget.toLocaleString()} publicidad) en {m.label.toLowerCase()}, el retorno estimado es de {roi}%.
             </p>
           </div>
         </div>

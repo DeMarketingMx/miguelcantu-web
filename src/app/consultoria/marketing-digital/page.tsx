@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, Target, BarChart3, Search, Mail, PenTool, TrendingUp } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ServiceProcess } from "@/components/ServiceProcess";
-import { DecorativeChart } from "@/components/DecorativeChart";
 import { BackgroundPattern } from "@/components/BackgroundPattern";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FadeIn } from "@/components/FadeIn";
@@ -65,13 +64,27 @@ export default function MarketingDigital() {
             </div>
           </FadeIn>
           <FadeIn delay={0.2} direction="right">
-            <div className="bg-surface p-6 border border-border">
-              <p className="text-xs text-text-muted uppercase tracking-wider mb-4">Clientes adquiridos — Crecimiento anual</p>
-              <DecorativeChart />
-              <div className="flex justify-between mt-4 text-xs text-text-muted">
-                <span>Mes 1</span>
-                <span>Mes 6</span>
-                <span>Mes 12</span>
+            <div className="space-y-4">
+              <div className="bg-surface p-6 border border-border">
+                <div className="flex items-center gap-3 mb-2">
+                  <Search size={20} className="text-accent" strokeWidth={1.5} />
+                  <p className="text-sm font-semibold text-primary">SEO y Posicionamiento</p>
+                </div>
+                <p className="text-xs text-text-muted">Que te encuentren quienes te necesitan. Estrategia de contenido + tecnica.</p>
+              </div>
+              <div className="bg-surface p-6 border border-border">
+                <div className="flex items-center gap-3 mb-2">
+                  <Target size={20} className="text-accent" strokeWidth={1.5} />
+                  <p className="text-sm font-semibold text-primary">Campanas de Performance</p>
+                </div>
+                <p className="text-xs text-text-muted">Google Ads, Meta Ads — cada peso invertido con objetivo claro y medible.</p>
+              </div>
+              <div className="bg-surface p-6 border border-border">
+                <div className="flex items-center gap-3 mb-2">
+                  <BarChart3 size={20} className="text-accent" strokeWidth={1.5} />
+                  <p className="text-sm font-semibold text-primary">Analitica y Atribucion</p>
+                </div>
+                <p className="text-xs text-text-muted">Dashboards, KPIs y reportes para saber que funciona y que no.</p>
               </div>
             </div>
           </FadeIn>

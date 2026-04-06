@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export function FunnelDemo() {
-  const [traffic, setTraffic] = useState(10000);
+  const [traffic, setTraffic] = useState(5000);
   const [convRate, setConvRate] = useState(3);
   const [closeRate, setCloseRate] = useState(25);
   const [avgTicket, setAvgTicket] = useState(15000);
@@ -33,7 +33,7 @@ export function FunnelDemo() {
               <label className="text-xs font-semibold uppercase tracking-wider text-primary">Trafico mensual</label>
               <span className="text-sm font-bold text-accent">{traffic.toLocaleString()}</span>
             </div>
-            <input type="range" min={1000} max={100000} step={1000} value={traffic} onChange={(e) => setTraffic(Number(e.target.value))}
+            <input type="range" min={1000} max={50000} step={500} value={traffic} onChange={(e) => setTraffic(Number(e.target.value))}
               className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent" />
           </div>
           <div>
