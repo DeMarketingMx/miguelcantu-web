@@ -24,6 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [{ url: post.thumbnail }],
+    },
   };
 }
 
@@ -49,6 +54,14 @@ export default async function BlogPost({ params }: Props) {
           {post.readingTime && ` · ${post.readingTime}`}
         </p>
         <h1 className="mb-8">{post.title}</h1>
+
+        <div className="mb-12 aspect-[16/9] overflow-hidden rounded-lg">
+          <img
+            src={post.thumbnail}
+            alt={post.title}
+            className="h-full w-full object-cover"
+          />
+        </div>
 
         <div className="prose prose-lg max-w-none text-text [&_a]:text-accent [&_a]:no-underline hover:[&_a]:underline [&_h2]:font-heading [&_h2]:text-primary [&_h3]:font-heading [&_h3]:text-primary">
           <div dangerouslySetInnerHTML={{ __html: post.content }} />

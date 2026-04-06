@@ -128,11 +128,12 @@ export default function SobreMi() {
         <AnimatedBackground variant="grid" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn>
-            <div className="aspect-[3/4] bg-navy/90 flex items-center justify-center">
-              <div className="text-center text-white/40 px-8">
-                <p className="text-sm uppercase tracking-wider mb-2">Foto profesional</p>
-                <p className="text-xs">Retrato de Miguel</p>
-              </div>
+            <div className="aspect-[3/4] overflow-hidden">
+              <img
+                src="/miguel-portrait.png"
+                alt="Miguel Cantu - Retrato profesional"
+                className="h-full w-full object-cover"
+              />
             </div>
           </FadeIn>
 
@@ -241,11 +242,12 @@ export default function SobreMi() {
             </ul>
           </FadeIn>
           <FadeIn delay={0.2} direction="right">
-            <div className="aspect-video bg-navy-light flex items-center justify-center">
-              <div className="text-center text-white/30 px-8">
-                <p className="text-sm uppercase tracking-wider mb-2">Imagen</p>
-                <p className="text-xs">Conferencia o clase en el Tec</p>
-              </div>
+            <div className="aspect-video overflow-hidden rounded-lg">
+              <img
+                src="/miguel-mission.png"
+                alt="Miguel Cantu impartiendo clase"
+                className="h-full w-full object-cover"
+              />
             </div>
           </FadeIn>
         </div>

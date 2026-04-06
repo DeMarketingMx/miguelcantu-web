@@ -89,11 +89,12 @@ export default function Home() {
 
           <FadeIn delay={0.2} direction="right">
             <div className="relative">
-              <div className="aspect-[4/3] bg-navy/90 flex items-center justify-center">
-                <div className="text-center text-white/40 px-8">
-                  <p className="text-sm uppercase tracking-wider mb-2">Foto profesional</p>
-                  <p className="text-xs">Reemplazar con foto de Miguel</p>
-                </div>
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/miguel-hero.png"
+                  alt="Miguel Cantu - Consultor de Transformacion Digital"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -left-4 bg-surface p-5 shadow-lg border border-border">
                 <p className="font-heading text-3xl font-bold text-accent">7+</p>
@@ -180,11 +181,12 @@ export default function Home() {
         <FloatingParticles count={12} color="accent" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn direction="left">
-            <div className="aspect-[4/3] bg-navy-light flex items-center justify-center">
-              <div className="text-center text-white/30 px-8">
-                <p className="text-sm uppercase tracking-wider mb-2">Imagen</p>
-                <p className="text-xs">Conferencia, clase o reunion</p>
-              </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
+              <img
+                src="/miguel-knowledge.png"
+                alt="Miguel Cantu en conferencia de consultoria"
+                className="h-full w-full object-cover"
+              />
             </div>
           </FadeIn>
 

@@ -91,12 +91,12 @@ export default function Blog() {
                     href={`/blog/${posts[0].slug}`}
                     className="group block no-underline"
                   >
-                    <div className="aspect-[16/10] bg-navy/90 mb-6 flex items-center justify-center">
-                      <div className="text-center text-white/40 px-8">
-                        <p className="text-sm uppercase tracking-wider">
-                          Imagen del articulo
-                        </p>
-                      </div>
+                    <div className="aspect-[16/10] mb-6 overflow-hidden bg-navy/90">
+                      <img
+                        src={posts[0].thumbnail}
+                        alt={posts[0].title}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
                     </div>
                     <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                       Transformacion Digital
@@ -123,7 +123,13 @@ export default function Blog() {
                     href={`/blog/${post.slug}`}
                     className="flex gap-4 no-underline group"
                   >
-                    <div className="aspect-square w-28 shrink-0 bg-navy/10" />
+                    <div className="aspect-square w-28 shrink-0 overflow-hidden bg-navy/10">
+                      <img
+                        src={post.thumbnail}
+                        alt={post.title}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
                     <div>
                       <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                         Blog

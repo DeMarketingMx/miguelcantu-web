@@ -1,0 +1,47 @@
+# ============================================
+# Redirecciones: miguelcantu.mba (Duda → Next.js)
+# Formato Cloudflare Pages: /old /new STATUS
+# ============================================
+
+# ── Páginas principales ES ──
+/contacto-miguel-cantu /contacto 301
+/miguel-cantu /sobre-mi 301
+/consultoria-digital /consultoria 301
+/digital-insights /blog 301
+/Conferencias-digitales /sobre-mi 301
+/libros /sobre-mi 301
+/politica-de-privacidad /politica-de-privacidad 301
+
+# ── Subpáginas de consultoría ES ──
+# (las que existen en el nuevo sitio se mantienen, las demás redirigen a /consultoria)
+/consultoria/transformacion-digital /consultoria/transformacion-digital 301
+/consultoria/marketing-digital /consultoria/marketing-digital 301
+/consultoria/analitica-web /consultoria/estrategia-digital 301
+/consultoria/branding /consultoria/estrategia-digital 301
+/consultoria/funnel-de-ventas /consultoria/marketing-digital 301
+/consultoria/redes-sociales /consultoria/marketing-digital 301
+/consultoria/visualizacion-de-datos /consultoria/estrategia-digital 301
+/consultoria/campanas-de-publicidad /consultoria/marketing-digital 301
+/consultoria/seo /consultoria/marketing-digital 301
+/consultoria/diseno-web /consultoria/estrategia-digital 301
+/consultoria/e-mail-marketing /consultoria/marketing-digital 301
+
+# ── Páginas EN ──
+/en /sobre-mi 301
+/en/miguel-cantu /sobre-mi 301
+/en/consultoria-digital /consultoria 301
+/en/contacto-miguel-cantu /contacto 301
+/en/digital-insights /blog 301
+/en/conferencias-digitales /sobre-mi 301
+/en/libros /sobre-mi 301
+/en/posicionamiento-de-marca /consultoria/estrategia-digital 301
+/en/promocion-de-servicios /consultoria/marketing-digital 301
+/en/consultoria-marketing-digital /consultoria/marketing-digital 301
+/en/diseno-web /consultoria/estrategia-digital 301
+/en/transformacion-digital /consultoria/transformacion-digital 301
+/en/agradecimiento /contacto 301
+
+# ── Blog posts (slug se mantiene igual) ──
+# Estos no necesitan redirección porque la ruta /blog/[slug] se mantiene idéntica.
+# Solo el post EN necesita redirección si no soportamos /blog/en/ en el nuevo sitio:
+/blog/en/shared-value-conscious-capitalism-csr /blog/shared-value-conscious-capitalism-csr 301

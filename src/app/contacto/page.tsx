@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, MapPin, Clock, Phone } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -74,79 +75,7 @@ export default function Contacto() {
           {/* Right - Form */}
           <div className="bg-surface p-8 shadow-md">
             <h3 className="mb-6 text-xl">Envia tu Mensaje</h3>
-            <form className="space-y-5">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
-                  >
-                    Nombre
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    className="input-minimal"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    className="input-minimal"
-                    placeholder="tu@empresa.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
-                >
-                  Asunto
-                </label>
-                <input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  className="input-minimal"
-                  placeholder="Asunto de tu mensaje"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-2 block text-xs font-semibold uppercase tracking-wider text-primary"
-                >
-                  Mensaje
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  className="input-minimal resize-none"
-                  placeholder="Cuentame sobre tu proyecto..."
-                />
-              </div>
-
-              <button type="submit" className="btn btn-primary w-full sm:w-auto">
-                Enviar Mensaje
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

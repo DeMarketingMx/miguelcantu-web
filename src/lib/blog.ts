@@ -11,6 +11,7 @@ export type BlogPost = {
   description: string;
   date: string;
   readingTime: string;
+  thumbnail: string;
   content: string;
 };
 
@@ -24,8 +25,10 @@ export function getBlogPosts(): BlogPost[] {
     const { data, content } = matter(raw);
     const stats = readingTime(content);
 
+    const slug = file.replace(/\.mdx?$/, "");
+
     return {
-      slug: file.replace(/\.mdx?$/, ""),
+      slug,
       title: data.title || "Sin titulo",
       description: data.description || "",
       date: data.date ? new Date(data.date).toLocaleDateString("es-MX", {
@@ -34,6 +37,7 @@ export function getBlogPosts(): BlogPost[] {
         day: "numeric",
       }) : "",
       readingTime: stats.text.replace("read", "de lectura").replace("min", "min"),
+      thumbnail: data.thumbnail || `/blog/${slug}.png`,
       content,
     };
   });
