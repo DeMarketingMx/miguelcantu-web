@@ -46,7 +46,7 @@ function slugify(text: string): string {
 }
 
 function markdownToHtml(markdown: string): { html: string; headings: Heading[] } {
-  const result = remark().use(html, { sanitize: false }).processSync(markdown);
+  const result = remark().use(html, { sanitize: false, allowDangerousHtml: true }).processSync(markdown);
   let htmlStr = result.toString();
 
   const headings: Heading[] = [];
