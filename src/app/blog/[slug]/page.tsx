@@ -164,11 +164,38 @@ export default async function BlogPost({ params }: Props) {
             </div>
           </div>
 
-          {/* Right sidebar - TOC + CTA + Author */}
+          {/* Right sidebar - TOC + Author + CTA */}
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-8">
               {/* Table of contents */}
               <TableOfContents headings={post.headings} />
+
+              {/* Author */}
+              <div className="rounded-lg border border-border bg-surface p-5 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full shadow-md ring-2 ring-accent/20">
+                    <img
+                      src="/miguel-avatar.png"
+                      alt="Miguel Cantu"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-primary">Miguel Cantu</p>
+                    <p className="text-[11px] text-text-muted">MBA, MBD</p>
+                  </div>
+                </div>
+                <p className="mt-3 text-xs text-text-muted leading-relaxed">
+                  Consultor en estrategia digital con mas de 7 anos ayudando a
+                  empresas a tomar mejores decisiones digitales.
+                </p>
+                <Link
+                  href="/sobre-mi"
+                  className="mt-3 inline-block text-xs font-medium text-accent no-underline hover:underline"
+                >
+                  Conocer mas →
+                </Link>
+              </div>
 
               {/* CTA Card */}
               <div className="rounded-lg border border-border bg-surface p-5 shadow-sm">
@@ -184,33 +211,6 @@ export default async function BlogPost({ params }: Props) {
                   className="mt-4 block rounded-md bg-accent px-4 py-2.5 text-center text-xs font-semibold text-white no-underline transition-colors hover:bg-accent-hover"
                 >
                   Agendar Consulta
-                </Link>
-              </div>
-
-              {/* Mini author */}
-              <div className="rounded-lg border border-border bg-surface p-5 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full">
-                    <img
-                      src="/miguel-avatar.png"
-                      alt="Miguel Cantu"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-primary">Miguel Cantu</p>
-                    <p className="text-[10px] text-text-muted">MBA, MBD</p>
-                  </div>
-                </div>
-                <p className="mt-3 text-xs text-text-muted leading-relaxed">
-                  Consultor en estrategia digital con mas de 7 anos ayudando a
-                  empresas a tomar mejores decisiones.
-                </p>
-                <Link
-                  href="/sobre-mi"
-                  className="mt-3 inline-block text-xs font-medium text-accent no-underline hover:underline"
-                >
-                  Conocer mas →
                 </Link>
               </div>
             </div>
