@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import { remark } from "remark";
+import html from "remark-html";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
@@ -33,6 +35,11 @@ function inferCategory(slug: string, title: string): string {
   return "Negocio";
 }
 
+function markdownToHtml(markdown: string): string {
+  const result = remark().use(html, { sanitize: false }).processSync(markdown);
+  return result.toString();
+}
+
 export function getBlogPosts(): BlogPost[] {
   if (!fs.existsSync(BLOG_DIR)) return [];
 
@@ -58,7 +65,7 @@ export function getBlogPosts(): BlogPost[] {
       readingTime: stats.text.replace("read", "de lectura").replace("min", "min"),
       thumbnail: data.thumbnail || `/blog/${slug}.png`,
       category: data.category || inferCategory(slug, title),
-      content,
+      content: markdownToHtml(content),
     };
   });
 
