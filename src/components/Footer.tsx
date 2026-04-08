@@ -30,7 +30,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="font-heading text-2xl font-bold text-white no-underline">
-              Miguel Cantu
+              Miguel Cantu, MBA, MBD
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/50">
               Consultor en marketing digital, transformacion digital, estrategia
@@ -129,7 +129,7 @@ export function Footer() {
       <div className="border-t border-white/8">
         <div className="mx-auto max-w-[1200px] px-6 py-5 flex flex-col items-center justify-between gap-3 sm:flex-row">
           <p className="text-xs text-white/30">
-            &copy; {new Date().getFullYear()} Miguel Cantu. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Miguel Cantu, MBA, MBD. Todos los derechos reservados.
           </p>
           <p className="text-xs text-white/20">
             Monterrey, Mexico

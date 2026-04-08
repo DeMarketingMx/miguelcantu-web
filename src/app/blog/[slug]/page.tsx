@@ -133,6 +133,23 @@ export default async function BlogPost({ params }: Props) {
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
 
+            {/* Mobile CTA */}
+            <div className="mt-12 rounded-lg border border-accent/20 bg-surface p-6 shadow-sm lg:hidden">
+              <p className="text-base font-semibold text-primary">
+                ¿Necesitas ayuda con esto?
+              </p>
+              <p className="mt-2 text-sm text-text-muted leading-relaxed">
+                Agenda una consulta sin compromiso y exploremos como aplicar
+                esto en tu empresa.
+              </p>
+              <Link
+                href="/contacto"
+                className="mt-4 block rounded-md bg-accent px-4 py-3 text-center text-sm font-semibold text-white no-underline transition-colors hover:bg-accent-hover"
+              >
+                Agendar Consulta
+              </Link>
+            </div>
+
             {/* Mobile related posts */}
             <div className="mt-16 border-t border-border pt-12 lg:hidden">
               <p className="mb-6 text-xs font-semibold uppercase tracking-wider text-primary">

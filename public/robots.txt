@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /gracias
+
+Sitemap: https://www.miguelcantu.mba/sitemap.xml

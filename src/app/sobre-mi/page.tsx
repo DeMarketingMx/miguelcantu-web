@@ -139,7 +139,7 @@ export default function SobreMi() {
 
           <FadeIn delay={0.2}>
             <span className="section-badge">Quien Soy</span>
-            <h2 className="mb-6">Miguel Cantu</h2>
+            <h2 className="mb-6">Miguel Cantu, MBA, MBD</h2>
             <p className="mb-4 text-text-muted leading-relaxed">
               Represento a Mexico en el Foro Mundial de Angeles Inversionistas,
               donde formo parte del comite de Ciencias, Tecnologia e Innovacion

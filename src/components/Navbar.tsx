@@ -44,7 +44,7 @@ export function Navbar() {
           href="/"
           className="font-heading text-2xl font-bold text-primary no-underline tracking-tight"
         >
-          Miguel Cantu
+          Miguel Cantu, MBA, MBD
         </Link>
 
         {/* Desktop */}
