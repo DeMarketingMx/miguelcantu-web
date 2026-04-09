@@ -115,6 +115,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
+          {/* Fallback: if JS doesn't load, make all animated content visible */}
+          <style>{`[style*="opacity"]{opacity:1!important;transform:none!important}`}</style>
         </noscript>
         <Navbar />
         <main className="flex-1">{children}</main>

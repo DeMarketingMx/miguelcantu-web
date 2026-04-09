@@ -251,3 +251,12 @@ h4, h5, h6 {
   color: var(--color-primary);
   font-weight: 600;
 }
+
+/* Fallback: users with reduced motion always see content */
+@media (prefers-reduced-motion: reduce) {
+  [style*="opacity: 0"],
+  [style*="opacity:0"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

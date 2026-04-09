@@ -10,12 +10,11 @@
 /digital-insights /blog 301
 /Conferencias-digitales /sobre-mi 301
 /libros /sobre-mi 301
-/politica-de-privacidad /politica-de-privacidad 301
+# /politica-de-privacidad — ya existe, no necesita redirect
 
 # ── Subpáginas de consultoría ES ──
-# (las que existen en el nuevo sitio se mantienen, las demás redirigen a /consultoria)
-/consultoria/transformacion-digital /consultoria/transformacion-digital 301
-/consultoria/marketing-digital /consultoria/marketing-digital 301
+# /consultoria/transformacion-digital — ya existe, no necesita redirect
+# /consultoria/marketing-digital — ya existe, no necesita redirect
 /consultoria/analitica-web /consultoria/estrategia-digital 301
 /consultoria/branding /consultoria/estrategia-digital 301
 /consultoria/funnel-de-ventas /consultoria/marketing-digital 301
