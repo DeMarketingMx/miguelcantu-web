@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
 
 type Props = {
   children: React.ReactNode;
@@ -12,28 +11,51 @@ type Props = {
 
 export function FadeIn({ children, delay = 0, direction = "up", className }: Props) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
-  const [canAnimate, setCanAnimate] = useState(false);
+  const [visible, setVisible] = useState(true); // SSR: always visible
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
-    setCanAnimate(true);
+
+    // If already in viewport, skip animation
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) return;
+
+    // Hide for scroll-triggered animation
+    setVisible(false);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-60px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
-  // SSR + pre-hydration + reduced motion: plain visible div, no opacity:0
-  if (!canAnimate) {
-    return <div ref={ref} className={className}>{children}</div>;
-  }
+  const hiddenTransform =
+    direction === "up" ? "translateY(30px)" :
+    direction === "left" ? "translateX(-30px)" :
+    direction === "right" ? "translateX(30px)" : "none";
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, y: direction === "up" ? 30 : 0, x: direction === "left" ? -30 : direction === "right" ? 30 : 0 }}
-      animate={isInView ? { opacity: 1, y: 0, x: 0 } : undefined}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
       className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "none" : hiddenTransform,
+        transition: visible
+          ? `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`
+          : "none",
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
