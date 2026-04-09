@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 type Props = {
   end: number;
@@ -20,11 +20,12 @@ export function AnimatedCounter({
 }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(end);
 
   useEffect(() => {
     if (!isInView) return;
 
+    setCount(0);
     let start = 0;
     const step = end / (duration * 60);
     const timer = setInterval(() => {
@@ -42,16 +43,11 @@ export function AnimatedCounter({
 
   return (
     <div ref={ref} className="text-center">
-      <motion.p
-        className="stat-number"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5 }}
-      >
+      <p className="stat-number">
         {prefix}
         {count}
         {suffix}
-      </motion.p>
+      </p>
       <p className="stat-label">{label}</p>
     </div>
   );
