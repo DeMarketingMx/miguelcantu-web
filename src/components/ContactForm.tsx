@@ -111,7 +111,7 @@ export default function ContactForm() {
           rows={5}
           required
           className="input-minimal resize-none"
-          placeholder="Cuentame sobre tu proyecto..."
+          placeholder="Cuentame brevemente sobre tu empresa y que necesitas..."
         />
       </div>
 
@@ -124,7 +124,7 @@ export default function ContactForm() {
         disabled={sending}
         className="btn btn-primary w-full sm:w-auto disabled:opacity-50"
       >
-        {sending ? "Enviando..." : "Enviar Mensaje"}
+        {sending ? "Enviando..." : "Agendar Consulta Gratuita"}
       </button>
     </form>
   );

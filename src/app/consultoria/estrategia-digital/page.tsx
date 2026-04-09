@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Compass, LineChart, Lightbulb, Puzzle, Gauge, Globe, Award, BookOpen, GraduationCap } from "lucide-react";
+import { ArrowRight, Compass, LineChart, Lightbulb, Puzzle, Gauge, Globe, Award, BookOpen, GraduationCap, ChevronDown } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ServiceProcess } from "@/components/ServiceProcess";
 import { StrategyVisual } from "@/components/StrategyVisual";
@@ -39,9 +39,46 @@ const certRibbon = [
   { icon: BookOpen, text: "7+ Certificaciones Digitales" },
 ];
 
+const faqs = [
+  {
+    q: "¿Cual es la diferencia entre estrategia digital y marketing digital?",
+    a: "La estrategia digital es el marco completo que define como tu empresa usa la tecnologia para competir y crecer. El marketing digital es uno de sus componentes. Una estrategia digital abarca procesos, datos, tecnologia, personas y canales — no solo campanas publicitarias.",
+  },
+  {
+    q: "¿Que entregables recibo de una consultoria en estrategia digital?",
+    a: "Recibes un diagnostico de madurez digital, un documento de estrategia con vision, objetivos y KPIs, una hoja de ruta priorizada por fases con timeline y presupuesto estimado, y un dashboard de seguimiento. Todo documentado y accionable para tu equipo.",
+  },
+  {
+    q: "¿Como se implementa la estrategia digital una vez definida?",
+    a: "La implementacion se hace por fases priorizadas segun impacto y factibilidad. Empezamos con quick wins que generan resultados rapidos, luego avanzamos a proyectos de mayor alcance. Puedo acompanar la ejecucion o capacitar a tu equipo interno para llevarla adelante.",
+  },
+  {
+    q: "¿Cuanto tiempo toma disenar una estrategia digital?",
+    a: "El proceso de diagnostico y diseno estrategico tipicamente toma de 4 a 8 semanas, dependiendo del tamano de la empresa y la complejidad del ecosistema digital. Incluye entrevistas con stakeholders, analisis de datos y benchmarking competitivo.",
+  },
+  {
+    q: "¿La estrategia digital aplica para empresas que apenas inician en digital?",
+    a: "Absolutamente. De hecho, es el mejor momento para hacerlo. Empezar con una estrategia clara evita invertir en herramientas o canales equivocados. Diseñamos una hoja de ruta que escala gradualmente segun tus recursos y prioridades de negocio.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function EstrategiaDigital() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="page-header">
         <h1>Consultor en Estrategia Digital</h1>
         <p className="breadcrumb">
@@ -145,6 +182,33 @@ export default function EstrategiaDigital() {
             </div>
           </FadeIn>
           <ServiceProcess steps={process} />
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-[800px]">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="section-badge">Preguntas Frecuentes</span>
+              <h2>Dudas sobre Estrategia Digital</h2>
+            </div>
+          </FadeIn>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <details className="group rounded-lg border border-border bg-surface">
+                  <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-semibold text-primary list-none [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <ChevronDown size={18} className="shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5 text-sm leading-relaxed text-text-muted">
+                    {faq.a}
+                  </div>
+                </details>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 

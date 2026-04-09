@@ -17,6 +17,7 @@ export type BlogPost = {
   title: string;
   description: string;
   date: string;
+  dateISO: string;
   readingTime: string;
   thumbnail: string;
   category: string;
@@ -83,6 +84,7 @@ export function getBlogPosts(): BlogPost[] {
         month: "long",
         day: "numeric",
       }) : "",
+      dateISO: data.date ? new Date(data.date).toISOString() : "",
       readingTime: stats.text.replace("read", "de lectura").replace("min", "min"),
       thumbnail: data.thumbnail || `/blog/${slug}.png`,
       category: data.category || inferCategory(slug, title),

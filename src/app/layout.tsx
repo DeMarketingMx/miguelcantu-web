@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+
+const GTM_ID = "GTM-TFTVN7B";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,7 +60,62 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.miguelcantu.mba/#website",
+                  url: "https://www.miguelcantu.mba",
+                  name: "Miguel Cantu",
+                  description: "Consultoria estrategica en marketing digital, transformacion digital e inteligencia artificial.",
+                  inLanguage: "es-MX",
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://www.miguelcantu.mba/#person",
+                  name: "Miguel Cantu",
+                  url: "https://www.miguelcantu.mba",
+                  image: "https://www.miguelcantu.mba/miguel-hero.png",
+                  jobTitle: "Consultor en Transformacion Digital e Inteligencia Artificial",
+                  worksFor: { "@type": "Organization", name: "De Marketing" },
+                  alumniOf: [
+                    { "@type": "CollegeOrUniversity", name: "IEBS Business School" },
+                    { "@type": "CollegeOrUniversity", name: "EGADE Business School" },
+                    { "@type": "CollegeOrUniversity", name: "Boston University" },
+                  ],
+                  knowsAbout: ["Marketing Digital", "Transformacion Digital", "Inteligencia Artificial", "Estrategia Digital", "Analitica de Datos"],
+                  sameAs: [],
+                },
+              ],
+            }),
+          }}
+        />
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

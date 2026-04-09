@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Layers, Users, Cpu, GitBranch, Shield, Workflow } from "lucide-react";
+import { ArrowRight, Layers, Users, Cpu, GitBranch, Shield, Workflow, ChevronDown } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ServiceProcess } from "@/components/ServiceProcess";
 import { NeuralNetwork } from "@/components/NeuralNetwork";
@@ -31,6 +31,39 @@ const process = [
   { number: "04", title: "Acompanamiento", description: "Seguimiento, ajustes y aseguramiento de la adopcion." },
 ];
 
+const faqs = [
+  {
+    q: "¿Que tan disruptivo es un proceso de transformacion digital?",
+    a: "No tiene que ser disruptivo. Un buen proyecto de transformacion digital se implementa por fases, empezando con quick wins que generan confianza y momentum. El objetivo es evolucionar tu operacion, no detenerla. Cada fase se planifica para minimizar friccion y maximizar adopcion.",
+  },
+  {
+    q: "¿Necesito cambiar todos mis sistemas y procesos actuales?",
+    a: "No necesariamente. El assessment inicial identifica que funciona bien y que necesita mejorar. Muchas veces se trata de integrar mejor lo que ya tienes, automatizar procesos manuales y cerrar gaps especificos — no de reemplazar todo desde cero.",
+  },
+  {
+    q: "¿Cuanto cuesta un proyecto de transformacion digital?",
+    a: "Depende del alcance y la madurez digital actual de tu empresa. Empezamos con un assessment que define exactamente que necesitas. A partir de ahi, se construye una hoja de ruta con fases priorizadas por impacto y presupuesto, para que inviertas donde realmente importa.",
+  },
+  {
+    q: "¿Cuanto tiempo toma una transformacion digital completa?",
+    a: "Una transformacion integral puede tomar de 12 a 24 meses, pero los primeros resultados se ven en las primeras 8-12 semanas con quick wins. Lo importante es establecer una hoja de ruta realista con hitos medibles en cada fase.",
+  },
+  {
+    q: "¿Que pasa si mi equipo se resiste al cambio?",
+    a: "La resistencia al cambio es normal y esperada. Por eso incluyo gestion del cambio como parte integral del proceso: comunicacion clara, capacitacion practica, lideres de cambio internos y metricas de adopcion. El exito depende tanto de las personas como de la tecnologia.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const networkNodes = [
   "Ventas",
   "Marketing",
@@ -45,6 +78,10 @@ const networkNodes = [
 export default function TransformacionDigital() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="page-header">
         <h1>Consultor en Transformacion Digital</h1>
         <p className="breadcrumb">
@@ -149,6 +186,33 @@ export default function TransformacionDigital() {
             </div>
           </FadeIn>
           <ServiceProcess steps={process} />
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-[800px]">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="section-badge">Preguntas Frecuentes</span>
+              <h2>Dudas sobre Transformacion Digital</h2>
+            </div>
+          </FadeIn>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <details className="group rounded-lg border border-border bg-surface">
+                  <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-semibold text-primary list-none [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <ChevronDown size={18} className="shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5 text-sm leading-relaxed text-text-muted">
+                    {faq.a}
+                  </div>
+                </details>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -168,6 +168,55 @@ export default function SobreMi() {
         </div>
       </section>
 
+      {/* Process — How I Work */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-[1200px]">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="section-badge">Proceso</span>
+              <h2>Como Trabajo</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-text-muted leading-relaxed">
+                Un proceso claro y repetible que convierte diagnostico en resultados concretos.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid gap-10 md:grid-cols-3">
+            {[
+              {
+                step: "01",
+                title: "Diagnostico",
+                description:
+                  "Analizamos donde esta tu empresa hoy. Datos, procesos, oportunidades.",
+              },
+              {
+                step: "02",
+                title: "Estrategia",
+                description:
+                  "Diseñamos el plan: que hacer, en que orden, con que metricas.",
+              },
+              {
+                step: "03",
+                title: "Ejecucion y Seguimiento",
+                description:
+                  "Implementamos, medimos, ajustamos. Reuniones periodicas de resultados.",
+              },
+            ].map((item, i) => (
+              <FadeIn key={item.step} delay={i * 0.15}>
+                <div className="card-hover h-full text-center">
+                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent font-heading text-xl font-bold">
+                    {item.step}
+                  </div>
+                  <h3 className="mb-3 text-lg">{item.title}</h3>
+                  <p className="text-sm text-text-muted leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Education */}
       <section className="bg-surface px-6 py-20">
         <div className="mx-auto max-w-[1200px]">
@@ -219,15 +268,57 @@ export default function SobreMi() {
         </div>
       </section>
 
-      {/* Mission navy */}
+      {/* Methodology — Core Principles */}
       <section className="section-navy px-6 py-20">
-        <div className="mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
+        <div className="mx-auto max-w-[1200px]">
           <FadeIn>
-            <span className="section-badge section-badge-white">Mision</span>
+            <div className="text-center mb-14">
+              <span className="section-badge section-badge-white">Metodologia</span>
+              <h2>Principios que Guian Cada Proyecto</h2>
+            </div>
+          </FadeIn>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "Datos Sobre Opiniones",
+                description:
+                  "Cada recomendacion respaldada por analitica real.",
+              },
+              {
+                title: "Estrategia Antes de Tacticas",
+                description:
+                  "Primero el plan, luego la ejecucion.",
+              },
+              {
+                title: "Resultados Medibles",
+                description:
+                  "Si no se puede medir, no se puede mejorar.",
+              },
+            ].map((v, i) => (
+              <FadeIn key={v.title} delay={i * 0.15}>
+                <div className="flex items-start gap-4">
+                  <CheckCircle size={22} className="text-accent shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-lg mb-2 text-white">{v.title}</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">{v.description}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="relative px-6 py-20 overflow-hidden">
+        <AnimatedBackground variant="grid" />
+        <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
+          <FadeIn>
+            <span className="section-badge">Mision</span>
             <h2 className="mb-6">
               Ayudar a Empresas a Tomar Mejores Decisiones Digitales
             </h2>
-            <p className="text-white/60 leading-relaxed mb-6">
+            <p className="text-text-muted leading-relaxed mb-6">
               Creo que cada empresa merece acceso a estrategia digital de primer
               nivel. No necesitas un equipo de 50 personas — necesitas claridad
               en que hacer, por que y cuando.
@@ -236,7 +327,7 @@ export default function SobreMi() {
               {["Consultor en marketing digital", "Consultor en transformacion digital", "Consultor en estrategia digital", "Consultor en inteligencia artificial"].map((s) => (
                 <li key={s} className="flex items-center gap-3">
                   <CheckCircle size={18} className="text-accent shrink-0" />
-                  <span className="text-sm text-white/80">{s}</span>
+                  <span className="text-sm text-text-muted">{s}</span>
                 </li>
               ))}
             </ul>
@@ -275,6 +366,37 @@ export default function SobreMi() {
                     <h3 className="text-lg mb-2">{t.role}</h3>
                     <p className="text-sm text-text-muted leading-relaxed">{t.description}</p>
                   </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Milestones Timeline */}
+      <section className="bg-surface px-6 py-20">
+        <div className="mx-auto max-w-[900px]">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="section-badge">Hitos</span>
+              <h2>Momentos Clave</h2>
+            </div>
+          </FadeIn>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { year: "2014", milestone: "Inicia carrera en marketing digital" },
+              { year: "2018", milestone: "MBA en Transformacion Digital (IEBS, Espana)" },
+              { year: "2020", milestone: "Maestria en Analitica (EGADE Business School)" },
+              { year: "2022", milestone: "Profesor de Catedra — Tec de Monterrey" },
+              { year: "2024", milestone: "Funda De Marketing — consultoria AI-First" },
+              { year: "2026", milestone: "Representante de Mexico en Foro Mundial de Angeles Inversionistas" },
+            ].map((m, i) => (
+              <FadeIn key={m.year} delay={i * 0.1}>
+                <div className="card-hover h-full">
+                  <span className="font-heading text-3xl font-bold text-accent/30 block mb-2">
+                    {m.year}
+                  </span>
+                  <p className="text-sm text-text-muted leading-relaxed">{m.milestone}</p>
                 </div>
               </FadeIn>
             ))}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Target, BarChart3, Search, Mail, PenTool, TrendingUp } from "lucide-react";
+import { ArrowRight, Target, BarChart3, Search, Mail, PenTool, TrendingUp, ChevronDown } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ServiceProcess } from "@/components/ServiceProcess";
 import { BackgroundPattern } from "@/components/BackgroundPattern";
@@ -30,9 +30,46 @@ const process = [
   { number: "04", title: "Medicion", description: "Reportes de resultados, ajustes y escalamiento." },
 ];
 
+const faqs = [
+  {
+    q: "¿Cuanto tiempo tarda en verse resultados de marketing digital?",
+    a: "Depende del canal. Las campanas de pago (Google Ads, Meta Ads) pueden generar leads desde la primera semana. El SEO y el marketing de contenidos son estrategias de mediano plazo — normalmente se ven resultados significativos entre los 3 y 6 meses, pero con un efecto acumulativo mucho mas sostenible.",
+  },
+  {
+    q: "¿Que incluye una consultoria en marketing digital?",
+    a: "Incluye un diagnostico completo de tu presencia digital actual, un plan estrategico con canales priorizados, KPIs definidos y un calendario de ejecucion. Dependiendo del alcance, tambien incluyo la supervision de campanas, optimizacion de SEO y reportes mensuales de resultados.",
+  },
+  {
+    q: "¿Como se mide el ROI del marketing digital?",
+    a: "Utilizamos herramientas de analitica (GA4, Google Tag Manager, CRM) para rastrear cada punto de contacto del cliente. Medimos costo por lead, costo por adquisicion, valor de vida del cliente y retorno sobre inversion publicitaria. Cada peso invertido tiene un KPI asociado.",
+  },
+  {
+    q: "¿Necesito tener un equipo interno de marketing?",
+    a: "No necesariamente. Puedo trabajar directamente con tu equipo existente, capacitarlos, o coordinar la ejecucion con mi agencia De Marketing. Lo importante es que tengas alguien internamente que pueda dar seguimiento a la estrategia y tomar decisiones rapidas.",
+  },
+  {
+    q: "¿Trabajas con empresas que ya tienen agencia de marketing?",
+    a: "Si, de hecho es un escenario comun. Mi rol como consultor es disenar la estrategia y supervisar que la agencia ejecute con los KPIs correctos. Aporto la vision estrategica y de negocio que complementa la ejecucion tactica de la agencia.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function MarketingDigital() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="page-header">
         <h1>Consultor en Marketing Digital</h1>
         <p className="breadcrumb">
@@ -161,6 +198,33 @@ export default function MarketingDigital() {
             </div>
           </FadeIn>
           <ServiceProcess steps={process} />
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-[800px]">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="section-badge">Preguntas Frecuentes</span>
+              <h2>Dudas sobre Marketing Digital</h2>
+            </div>
+          </FadeIn>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <details className="group rounded-lg border border-border bg-surface">
+                  <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-semibold text-primary list-none [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <ChevronDown size={18} className="shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5 text-sm leading-relaxed text-text-muted">
+                    {faq.a}
+                  </div>
+                </details>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 

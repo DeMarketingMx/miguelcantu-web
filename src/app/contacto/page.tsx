@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, CheckCircle } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -64,8 +64,25 @@ export default function Contacto() {
 
           {/* Right - Form */}
           <div className="bg-surface p-8 shadow-md">
-            <h3 className="mb-6 text-xl">Envia tu Mensaje</h3>
+            <h3 className="mb-2 text-xl">Agenda tu Consulta</h3>
+            <p className="mb-6 text-sm text-text-muted">
+              50+ empresas han confiado en mi consultoria
+            </p>
             <ContactForm />
+
+            {/* Trust indicators */}
+            <div className="mt-6 space-y-2">
+              {[
+                "Respuesta en menos de 24 horas",
+                "Sin compromiso",
+                "Datos 100% confidenciales",
+              ].map((text) => (
+                <div key={text} className="flex items-center gap-2">
+                  <CheckCircle size={16} className="shrink-0 text-accent" strokeWidth={1.5} />
+                  <span className="text-xs text-text-muted">{text}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

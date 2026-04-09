@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Brain, Bot, Database, Zap, MessageSquare, Eye } from "lucide-react";
+import { ArrowRight, Brain, Bot, Database, Zap, MessageSquare, Eye, ChevronDown } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ServiceProcess } from "@/components/ServiceProcess";
 import { NeuralNetwork } from "@/components/NeuralNetwork";
@@ -31,6 +31,39 @@ const process = [
   { number: "04", title: "Escalamiento", description: "Expansion a otros procesos y mejora continua del modelo." },
 ];
 
+const faqs = [
+  {
+    q: "¿Necesito un equipo tecnico para implementar IA en mi empresa?",
+    a: "No necesariamente. Muchas soluciones de IA modernas son no-code o low-code y se integran directamente con tus herramientas existentes. Para proyectos mas complejos, puedo coordinar con desarrolladores especializados. Mi rol es asegurar que la solucion tenga sentido de negocio, no solo tecnico.",
+  },
+  {
+    q: "¿Que procesos de mi empresa se pueden automatizar con IA?",
+    a: "Los mejores candidatos son procesos repetitivos con alto volumen de datos: clasificacion de documentos, atencion al cliente, analisis de ventas, segmentacion de clientes, prediccion de demanda y generacion de contenido. En el assessment inicial identificamos los casos con mayor ROI.",
+  },
+  {
+    q: "¿Es seguro usar IA con los datos de mi empresa?",
+    a: "Si, siempre que se implemente correctamente. Evaluamos opciones de IA privada (modelos on-premise o en tu propia nube), politicas de acceso a datos, anonimizacion y cumplimiento regulatorio. La seguridad y privacidad de datos es parte fundamental de cualquier proyecto de IA que diseñamos.",
+  },
+  {
+    q: "¿Cual es la diferencia entre IA generativa y analitica avanzada?",
+    a: "La analitica avanzada usa modelos predictivos para encontrar patrones y predecir resultados (ej: que cliente va a comprar). La IA generativa crea contenido nuevo — textos, imagenes, codigo. Ambas son complementarias y las combinamos segun el caso de uso de tu negocio.",
+  },
+  {
+    q: "¿Cuanto cuesta implementar IA en una empresa mediana?",
+    a: "Un piloto tipico puede arrancar desde $5,000 USD y validar el impacto en 4-8 semanas. El costo depende de la complejidad del caso de uso, la calidad de los datos disponibles y el nivel de integracion requerido. Siempre empezamos con un piloto acotado antes de escalar.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const businessAreas = [
   "Ventas",
   "Marketing",
@@ -52,6 +85,10 @@ const aiModels = [
 export default function InteligenciaArtificial() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="page-header">
         <h1>Consultor en Inteligencia Artificial</h1>
         <p className="breadcrumb">
@@ -159,6 +196,33 @@ export default function InteligenciaArtificial() {
             </div>
           </FadeIn>
           <ServiceProcess steps={process} />
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-[800px]">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <span className="section-badge">Preguntas Frecuentes</span>
+              <h2>Dudas sobre Inteligencia Artificial</h2>
+            </div>
+          </FadeIn>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <details className="group rounded-lg border border-border bg-surface">
+                  <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-semibold text-primary list-none [&::-webkit-details-marker]:hidden">
+                    {faq.q}
+                    <ChevronDown size={18} className="shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" />
+                  </summary>
+                  <div className="px-6 pb-5 text-sm leading-relaxed text-text-muted">
+                    {faq.a}
+                  </div>
+                </details>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 

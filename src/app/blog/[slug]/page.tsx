@@ -41,8 +41,76 @@ export default async function BlogPost({ params }: Props) {
 
   const related = getRelatedPosts(slug, 4);
 
+  const baseUrl = "https://www.miguelcantu.mba";
+  const postUrl = `${baseUrl}/blog/${slug}`;
+  const thumbnailUrl = post.thumbnail.startsWith("http")
+    ? post.thumbnail
+    : `${baseUrl}${post.thumbnail}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${baseUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: postUrl,
+      },
+    ],
+  };
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: thumbnailUrl,
+    datePublished: post.dateISO,
+    url: postUrl,
+    author: {
+      "@type": "Person",
+      name: "Miguel Cantu",
+      url: `${baseUrl}/sobre-mi`,
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Miguel Cantu",
+      url: baseUrl,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+  };
+
   return (
-    <article className="px-6 py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogPostingSchema),
+        }}
+      />
+      <article className="px-6 py-20">
       <div className="mx-auto max-w-[1200px]">
         {/* Back link */}
         <Link
@@ -235,5 +303,6 @@ export default async function BlogPost({ params }: Props) {
         </div>
       </div>
     </article>
+    </>
   );
 }
