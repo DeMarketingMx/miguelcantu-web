@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Cantu — Brand Guidelines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #051C2C;
+      --color-accent: #1D4ED8;
+      --color-accent-hover: #1E40AF;
+      --color-accent-light: rgba(29, 78, 216, 0.08);
+      --color-background: #F5F5F5;
+      --color-surface: #FFFFFF;
+      --color-text: rgba(5, 28, 44, 0.85);
+      --color-text-muted: rgba(5, 28, 44, 0.55);
+      --color-border: rgba(5, 28, 44, 0.12);
+      --shadow-sm: 0 1px 2px rgba(5, 28, 44, 0.05);
+      --shadow-md: 0 4px 12px rgba(5, 28, 44, 0.08);
+      --shadow-lg: 0 8px 24px rgba(5, 28, 44, 0.12);
+      --shadow-xl: 0 16px 48px rgba(5, 28, 44, 0.16);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--color-background);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    /* --- NAV --- */
+    .nav {
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--color-accent); }
+
+    /* --- LAYOUT --- */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 4rem 0; }
+    section + section { border-top: 1px solid var(--color-border); }
+
+    /* --- HERO --- */
+    .hero {
+      padding: 6rem 0;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-light);
+      padding: 0.375rem 1rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 2rem + 3vw, 4rem);
+      color: var(--color-primary);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.75rem, 1.5rem + 1.5vw, 2.25rem);
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: 0.75rem;
+    }
+    h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    p { margin-bottom: 1rem; max-width: 65ch; }
+    .hero p { margin: 0 auto 2rem; color: var(--color-text-muted); font-size: 1.125rem; }
+
+    .subtitle {
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* --- COLOR SWATCHES --- */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .swatch {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .swatch:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .swatch-color {
+      height: 120px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+    }
+    .swatch-color span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Inter', monospace;
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.9);
+      color: var(--color-primary);
+    }
+    .swatch-color.on-dark span {
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+    .swatch-info {
+      padding: 1rem;
+    }
+    .swatch-info h4 {
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    .swatch-info p {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0;
+    }
+
+    /* --- TYPOGRAPHY SPECIMENS --- */
+    .type-specimen {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .type-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .type-sample-playfair {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    .type-sample-inter {
+      font-family: 'Inter', sans-serif;
+      color: var(--color-text);
+    }
+    .type-meta {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    /* --- SCALE TABLE --- */
+    .scale-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .scale-table th, .scale-table td {
+      padding: 0.875rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.875rem;
+    }
+    .scale-table th {
+      font-weight: 600;
+      color: var(--color-primary);
+      background: var(--color-accent-light);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .scale-table tr:last-child td { border-bottom: none; }
+    .scale-table code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.8rem;
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      padding: 0.15rem 0.4rem;
+      border-radius: var(--radius-sm);
+    }
+
+    /* --- GRID LAYOUTS --- */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+    @media (max-width: 768px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    /* --- CARDS --- */
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .card h3 { font-size: 1.1rem; }
+    .card p { font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0; }
+
+    /* --- BUTTONS --- */
+    .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--color-accent);
+      color: #fff;
+      border-color: var(--color-accent);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--color-accent);
+      border-color: transparent;
+    }
+    .btn-ghost:hover {
+      background: var(--color-accent-light);
+    }
+
+    /* --- DO/DON'T --- */
+    .do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    @media (max-width: 768px) { .do-dont { grid-template-columns: 1fr; } }
+    .do-box, .dont-box {
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      font-size: 0.9rem;
+    }
+    .do-box {
+      background: rgba(29, 78, 216, 0.06);
+      border-left: 4px solid var(--color-accent);
+    }
+    .dont-box {
+      background: rgba(220, 38, 38, 0.04);
+      border-left: 4px solid #DC2626;
+    }
+    .do-box h4 { color: var(--color-accent); }
+    .dont-box h4 { color: #DC2626; }
+    .do-box blockquote, .dont-box blockquote {
+      font-style: italic;
+      margin: 0.5rem 0;
+      padding-left: 1rem;
+      border-left: 2px solid var(--color-border);
+      color: var(--color-text-muted);
+    }
+
+    /* --- POSITIONING --- */
+    .positioning-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-top: 1.5rem;
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+    .positioning-cell {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+      border-right: 1px solid var(--color-border);
+    }
+    .positioning-cell:nth-child(even) { border-right: none; }
+    .positioning-cell:nth-last-child(-n+2) { border-bottom: none; }
+    .positioning-cell h4 { font-size: 0.8rem; margin-bottom: 0.75rem; }
+    .positioning-cell ul {
+      list-style: none;
+      font-size: 0.875rem;
+    }
+    .positioning-cell ul li {
+      padding: 0.25rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .positioning-cell ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    .pos-yes ul li::before { background: var(--color-accent); }
+    .pos-no ul li::before { background: #DC2626; }
+
+    /* --- SHADOWS DEMO --- */
+    .shadow-demo {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .shadow-box {
+      width: 140px;
+      height: 100px;
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    /* --- SPACING DEMO --- */
+    .spacing-demo { margin-top: 1.5rem; }
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .spacing-bar {
+      height: 24px;
+      background: var(--color-accent-light);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .spacing-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      min-width: 80px;
+      text-align: right;
+    }
+    .spacing-value {
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      font-family: monospace;
+    }
+
+    /* --- RADIUS DEMO --- */
+    .radius-demo {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .radius-box {
+      width: 100px;
+      height: 80px;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      font-weight: 600;
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+      background: var(--color-primary);
+      color: rgba(255,255,255,0.7);
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    .footer strong { color: #fff; }
+
+    /* --- ICON STYLE --- */
+    .icon-demo {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-box svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--color-primary);
+      stroke-width: 1.5;
+      fill: none;
+    }
+
+    /* --- AI IMAGE STYLES --- */
+    .ai-section { background: #0a1225; padding: 4rem 0; }
+    .ai-section h2, .ai-section h3, .ai-section h4, .ai-section p { color: #fff; }
+    .ai-section .subtitle { color: rgba(255,255,255,0.55); }
+    .ai-color-grid {
+      display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;
+    }
+    .ai-color-chip {
+      width: 60px; height: 60px; border-radius: var(--radius-md);
+      display: flex; align-items: flex-end; padding: 4px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .ai-color-chip span {
+      font-size: 0.6rem; color: rgba(255,255,255,0.7); font-family: monospace;
+    }
+    .ai-style-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem; margin-top: 1.5rem;
+    }
+    .ai-style-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .ai-style-card:hover { border-color: rgba(29, 78, 216, 0.4); }
+    .ai-style-card .ai-card-preview {
+      height: 180px; background: #0d1a30;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .ai-style-card .ai-card-preview img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .ai-card-body { padding: 1.25rem; }
+    .ai-card-body h4 {
+      font-size: 0.9rem; text-transform: none; letter-spacing: 0;
+      margin-bottom: 0.5rem; color: #fff;
+    }
+    .ai-card-body .ai-badge {
+      display: inline-block; font-size: 0.65rem; font-weight: 600;
+      padding: 0.2rem 0.5rem; border-radius: var(--radius-sm);
+      background: rgba(29, 78, 216, 0.15); color: #60a5fa;
+      margin-right: 0.35rem; margin-bottom: 0.35rem;
+    }
+    .ai-card-body .ai-topics {
+      font-size: 0.75rem; color: rgba(255,255,255,0.45);
+      margin-top: 0.75rem; margin-bottom: 0.75rem;
+    }
+    .prompt-code {
+      background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-md); padding: 0.875rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.7rem; line-height: 1.6;
+      color: rgba(255,255,255,0.6); max-height: 140px; overflow-y: auto;
+      white-space: pre-wrap; word-break: break-word;
+    }
+    .ai-rules {
+      margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) { .ai-rules { grid-template-columns: 1fr; } }
+    .ai-rule {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-md); padding: 1rem;
+    }
+    .ai-rule h4 { font-size: 0.8rem; color: #60a5fa; margin-bottom: 0.5rem; }
+    .ai-rule p { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 0; }
+
+    /* --- MOCKUP SECTION --- */
+    .mockup-frame {
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    .mockup-browser-bar {
+      background: var(--color-background);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .mockup-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-border);
+    }
+    .mockup-url {
+      flex: 1;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+    .mockup-content {
+      padding: 0;
+      background: var(--color-background);
+    }
+    .mockup-nav {
+      background: var(--color-surface);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .mockup-nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--color-primary);
+    }
+    .mockup-nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+    .mockup-nav-links span:hover { color: var(--color-accent); cursor: pointer; }
+    .mockup-hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .mockup-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .mockup-hero p {
+      color: var(--color-text-muted);
+      margin: 0 auto 1.5rem;
+      max-width: 500px;
+      font-size: 0.9rem;
+    }
+    .mockup-hero .btn { font-size: 0.8rem; padding: 0.625rem 1.25rem; }
+    .mockup-footer {
+      background: var(--color-primary);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <a href="#" class="nav-brand">Miguel Cantu</a>
+    <div class="nav-links">
+      <a href="#positioning">Posicionamiento</a>
+      <a href="#colors">Colores</a>
+      <a href="#typography">Tipografia</a>
+      <a href="#voice">Voz</a>
+      <a href="#components">Componentes</a>
+      <a href="#ai-images">AI Images</a>
+      <a href="#mockup">Mockup</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="container">
+    <div class="hero">
+      <div class="hero-badge">Brand Guidelines v1.0</div>
+      <h1>Miguel Cantu</h1>
+      <p>Guia completa de identidad visual y verbal para la marca personal. Cada decision de diseno comunica autoridad, claridad y estrategia.</p>
+    </div>
+  </div>
+
+  <!-- POSITIONING -->
+  <div class="container">
+    <section id="positioning">
+      <h2>Posicionamiento</h2>
+      <p class="subtitle">Lo que la marca es — y lo que no es.</p>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h4>Statement</h4>
+        <p style="font-size: 1.125rem; font-family: 'Playfair Display', serif; color: var(--color-primary); font-weight: 700; margin-bottom: 0;">
+          Consultor estrategico en transformacion digital para empresas que quieren crecer con claridad.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Estrategico</h3>
+          <p>Vision de alto nivel, no tactica ni ejecucion operativa. Piensa en el "por que" antes del "como".</p>
+        </div>
+        <div class="card">
+          <h3>Premium</h3>
+          <p>Cada elemento comunica que vale lo que cobra. Sin ruido, sin adornos innecesarios.</p>
+        </div>
+        <div class="card">
+          <h3>Confiable</h3>
+          <p>Seriedad, track record, resultados. Sin superlativos ni promesas vacias.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Posicionamiento vs Anti-posicionamiento</h3>
+      <div class="positioning-grid">
+        <div class="positioning-cell pos-yes">
+          <h4>La marca ES</h4>
+          <ul>
+            <li>Consultor estrategico de alto nivel</li>
+            <li>Par de directores y C-suite</li>
+            <li>Generador de contenido con autoridad</li>
+            <li>Marca personal con punto de vista</li>
+            <li>Transformacion como decision de negocio</li>
+          </ul>
+        </div>
+        <div class="positioning-cell pos-no">
+          <h4>La marca NO ES</h4>
+          <ul>
+            <li>Influencer tech casual</li>
+            <li>Startup / hustle culture</li>
+            <li>Agencia creativa colorida</li>
+            <li>Academico / teorico</li>
+            <li>Proveedor generico corporativo</li>
+          </ul>
+        </div>
+        <div class="positioning-cell pos-yes">
+          <h4>Audiencia primaria</h4>
+          <ul>
+            <li>Directores y C-suite</li>
+            <li>Empresas medianas en Mexico</li>
+            <li>Buscando transformacion digital</li>
+            <li>Dispuestos a invertir en estrategia</li>
+          </ul>
+        </div>
+        <div class="positioning-cell pos-yes">
+          <h4>Audiencia secundaria</h4>
+          <ul>
+            <li>Marketers y profesionales digitales</li>
+            <li>Consumidores de contenido (blog)</li>
+            <li>Asistentes a conferencias</li>
+            <li>Genera credibilidad para audiencia 1</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- COLORS -->
+  <div class="container">
+    <section id="colors">
+      <h2>Paleta de Colores</h2>
+      <p class="subtitle">La marca es duena de un solo color: cobalto. Usarlo con intencion y escasez.</p>
+
+      <div class="color-grid">
+        <div class="swatch">
+          <div class="swatch-color on-dark" style="background: #051C2C;"><span>#051C2C</span></div>
+          <div class="swatch-info">
+            <h4>Primary — Navy</h4>
+            <p>Navbar, headings, texto principal, footer background</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color on-dark" style="background: #1D4ED8;"><span>#1D4ED8</span></div>
+          <div class="swatch-info">
+            <h4>Accent — Cobalto</h4>
+            <p>CTAs, botones, links, lineas decorativas, enfasis</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #F5F5F5; border: 1px solid var(--color-border);"><span>#F5F5F5</span></div>
+          <div class="swatch-info">
+            <h4>Background</h4>
+            <p>Fondo general del sitio</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #FFFFFF; border: 1px solid var(--color-border);"><span>#FFFFFF</span></div>
+          <div class="swatch-info">
+            <h4>Surface</h4>
+            <p>Cards, navbar, footer, secciones destacadas</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color on-dark" style="background: #1E40AF;"><span>#1E40AF</span></div>
+          <div class="swatch-info">
+            <h4>Accent Hover</h4>
+            <p>Estado hover del cobalto</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: rgba(29, 78, 216, 0.08); border: 1px solid var(--color-border);"><span>Accent 8%</span></div>
+          <div class="swatch-info">
+            <h4>Accent Light</h4>
+            <p>Badges, tags, highlight areas</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: rgba(5, 28, 44, 0.85);"><span>85% opacity</span></div>
+          <div class="swatch-info">
+            <h4>Text</h4>
+            <p>Texto body principal</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: rgba(5, 28, 44, 0.55);"><span>55% opacity</span></div>
+          <div class="swatch-info">
+            <h4>Text Muted</h4>
+            <p>Texto secundario, captions, metadata</p>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: rgba(5, 28, 44, 0.12); border: 1px solid var(--color-border);"><span>12% opacity</span></div>
+          <div class="swatch-info">
+            <h4>Border</h4>
+            <p>Bordes sutiles, dividers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TYPOGRAPHY -->
+  <div class="container">
+    <section id="typography">
+      <h2>Tipografia</h2>
+      <p class="subtitle">Playfair Display para headings (autoridad editorial), Inter para todo lo demas (claridad).</p>
+
+      <div class="type-specimen">
+        <div class="type-label">H1 — Hero / Titulos principales</div>
+        <div class="type-sample-playfair" style="font-size: clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem);">Transformacion Digital con Estrategia</div>
+        <div class="type-meta">Playfair Display Bold — clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem)</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">H2 — Secciones</div>
+        <div class="type-sample-playfair" style="font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);">15 anos transformando negocios</div>
+        <div class="type-meta">Playfair Display Bold — clamp(1.5rem, 1.2rem + 1.5vw, 2rem)</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">H3 — Subtitulos</div>
+        <div class="type-sample-playfair" style="font-size: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);">Consultoria en marketing digital</div>
+        <div class="type-meta">Playfair Display Bold — clamp(1.125rem, 1rem + 0.6vw, 1.25rem)</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">H4 — Labels de seccion</div>
+        <div class="type-sample-inter" style="font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Servicios Destacados</div>
+        <div class="type-meta">Inter Semi-bold — 1rem — uppercase, letter-spacing 0.05em</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Body — Parrafos</div>
+        <div class="type-sample-inter" style="font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem); max-width: 65ch; line-height: 1.7;">
+          La transformacion digital no es un proyecto de TI. Es una decision de negocio que requiere vision estrategica, alineacion organizacional y ejecucion disciplinada. Trabajo con directores que entienden esto.
+        </div>
+        <div class="type-meta">Inter Regular — clamp(1rem, 0.9rem + 0.5vw, 1.125rem) — line-height 1.7 — max-width 65ch</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Caption / Metadata</div>
+        <div class="type-sample-inter" style="font-size: 0.875rem; color: var(--color-text-muted);">15 de marzo, 2026 &mdash; 5 min de lectura &mdash; Transformacion Digital</div>
+        <div class="type-meta">Inter Regular — 0.875rem — color text-muted</div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Escala tipografica</h3>
+      <table class="scale-table">
+        <thead>
+          <tr><th>Token</th><th>Size</th><th>Uso</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>--text-xs</code></td><td>clamp(0.75rem, ..., 0.875rem)</td><td>Fine print, badges</td></tr>
+          <tr><td><code>--text-sm</code></td><td>clamp(0.875rem, ..., 1rem)</td><td>Captions, metadata</td></tr>
+          <tr><td><code>--text-base</code></td><td>clamp(1rem, ..., 1.125rem)</td><td>Body text</td></tr>
+          <tr><td><code>--text-lg</code></td><td>clamp(1.125rem, ..., 1.25rem)</td><td>Lead paragraphs</td></tr>
+          <tr><td><code>--text-xl</code></td><td>clamp(1.25rem, ..., 1.5rem)</td><td>H4, card titles</td></tr>
+          <tr><td><code>--text-2xl</code></td><td>clamp(1.5rem, ..., 2rem)</td><td>H3</td></tr>
+          <tr><td><code>--text-3xl</code></td><td>clamp(1.875rem, ..., 2.5rem)</td><td>H2</td></tr>
+          <tr><td><code>--text-4xl</code></td><td>clamp(2.25rem, ..., 3.5rem)</td><td>H1</td></tr>
+          <tr><td><code>--text-5xl</code></td><td>clamp(3rem, ..., 4.5rem)</td><td>Hero display</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- SPACING & LAYOUT -->
+  <div class="container">
+    <section id="spacing">
+      <h2>Espaciado, Radios y Sombras</h2>
+      <p class="subtitle">Sistema de espaciado consistente basado en multiplos de 4px.</p>
+
+      <h3>Spacing Scale</h3>
+      <div class="spacing-demo">
+        <div class="spacing-row">
+          <span class="spacing-label">xs</span>
+          <div class="spacing-bar" style="width: 16px;"></div>
+          <span class="spacing-value">4px (0.25rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">sm</span>
+          <div class="spacing-bar" style="width: 32px;"></div>
+          <span class="spacing-value">8px (0.5rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">md</span>
+          <div class="spacing-bar" style="width: 64px;"></div>
+          <span class="spacing-value">16px (1rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">lg</span>
+          <div class="spacing-bar" style="width: 96px;"></div>
+          <span class="spacing-value">24px (1.5rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">xl</span>
+          <div class="spacing-bar" style="width: 128px;"></div>
+          <span class="spacing-value">32px (2rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">2xl</span>
+          <div class="spacing-bar" style="width: 192px;"></div>
+          <span class="spacing-value">48px (3rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">3xl</span>
+          <div class="spacing-bar" style="width: 256px;"></div>
+          <span class="spacing-value">64px (4rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">4xl</span>
+          <div class="spacing-bar" style="width: 384px;"></div>
+          <span class="spacing-value">96px (6rem)</span>
+        </div>
+        <div class="spacing-row">
+          <span class="spacing-label">5xl</span>
+          <div class="spacing-bar" style="width: 512px;"></div>
+          <span class="spacing-value">128px (8rem)</span>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Border Radius</h3>
+      <div class="radius-demo">
+        <div class="radius-box" style="border-radius: 4px;">
+          <span>sm</span>
+          <span>4px</span>
+        </div>
+        <div class="radius-box" style="border-radius: 8px;">
+          <span>md</span>
+          <span>8px</span>
+        </div>
+        <div class="radius-box" style="border-radius: 12px;">
+          <span>lg</span>
+          <span>12px</span>
+        </div>
+        <div class="radius-box" style="border-radius: 16px;">
+          <span>xl</span>
+          <span>16px</span>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Sombras</h3>
+      <div class="shadow-demo">
+        <div class="shadow-box" style="box-shadow: var(--shadow-sm);">
+          <span>shadow-sm</span>
+        </div>
+        <div class="shadow-box" style="box-shadow: var(--shadow-md);">
+          <span>shadow-md</span>
+        </div>
+        <div class="shadow-box" style="box-shadow: var(--shadow-lg);">
+          <span>shadow-lg</span>
+        </div>
+        <div class="shadow-box" style="box-shadow: var(--shadow-xl);">
+          <span>shadow-xl</span>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Layout</h3>
+      <table class="scale-table">
+        <thead>
+          <tr><th>Propiedad</th><th>Valor</th><th>Nota</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Max-width contenido</td><td><code>1200px</code></td><td>Contenedor principal</td></tr>
+          <tr><td>Max-width layout</td><td><code>1440px</code></td><td>Layout completo</td></tr>
+          <tr><td>Grid</td><td><code>12 columnas</code></td><td>Gap: 24px (--space-lg)</td></tr>
+          <tr><td>Separacion entre secciones</td><td><code>64px min</code></td><td>--space-3xl minimo</td></tr>
+          <tr><td>Ancho de lectura</td><td><code>65ch</code></td><td>Optimo para legibilidad</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- VOICE & TONE -->
+  <div class="container">
+    <section id="voice">
+      <h2>Voz y Tono</h2>
+      <p class="subtitle">Como habla la marca — directo, seguro, accesible sin ser casual.</p>
+
+      <div class="grid-3" style="margin-bottom: 2rem;">
+        <div class="card">
+          <h3>Directo</h3>
+          <p>Sin rodeos, sin fluff. Dice lo que hay que decir en las menos palabras posibles.</p>
+        </div>
+        <div class="card">
+          <h3>Seguro</h3>
+          <p>Habla desde la experiencia, no desde la teoria. Afirma, no sugiere timidamente.</p>
+        </div>
+        <div class="card">
+          <h3>Accesible</h3>
+          <p>No usa jerga innecesaria. Explica lo complejo con claridad, sin ser condescendiente.</p>
+        </div>
+      </div>
+
+      <h3>Principios de Copy</h3>
+      <table class="scale-table">
+        <thead>
+          <tr><th>#</th><th>Principio</th><th>Ejemplo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Lead con el beneficio, no la credencial</td><td>"Tus decisiones digitales, mejor informadas" vs "Consultor certificado..."</td></tr>
+          <tr><td>2</td><td>Oraciones cortas. Parrafos cortos.</td><td>Max 2-3 lineas por parrafo</td></tr>
+          <tr><td>3</td><td>Evitar superlativos</td><td>No: "el mejor", "lider", "experto #1"</td></tr>
+          <tr><td>4</td><td>Datos especificos > adjetivos vagos</td><td>"15 anos" vs "amplia experiencia"</td></tr>
+          <tr><td>5</td><td>CTA claro y directo</td><td>"Agendar consulta" no "Conoce mas"</td></tr>
+          <tr><td>6</td><td>Primera persona</td><td>"Ayudo a empresas..." no "Se ofrecen servicios..."</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top: 2rem;">Ejemplos</h3>
+      <div class="do-dont">
+        <div class="do-box">
+          <h4>Si</h4>
+          <blockquote>"15 anos ayudando a empresas a tomar mejores decisiones digitales."</blockquote>
+          <blockquote>"La transformacion digital no es un proyecto de TI. Es una decision de negocio."</blockquote>
+          <blockquote>"Trabajo con directores que quieren claridad, no mas herramientas."</blockquote>
+        </div>
+        <div class="dont-box">
+          <h4>No</h4>
+          <blockquote>"Soy un apasionado lider en innovacion digital con amplia experiencia..."</blockquote>
+          <blockquote>"En un mundo cada vez mas digitalizado, las empresas necesitan..."</blockquote>
+          <blockquote>"Ofrecemos soluciones integrales de transformacion end-to-end..."</blockquote>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- COMPONENTS -->
+  <div class="container">
+    <section id="components">
+      <h2>Componentes</h2>
+      <p class="subtitle">Patrones de UI reutilizables con los estilos de la marca aplicados.</p>
+
+      <h3>Botones</h3>
+      <div class="btn-row">
+        <a class="btn btn-primary">Agendar Consulta</a>
+        <a class="btn btn-secondary">Ver Blog</a>
+        <a class="btn btn-ghost">Leer mas</a>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Cards</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Transformacion Digital</h3>
+          <p>Estrategia y hoja de ruta para llevar tu empresa al siguiente nivel digital.</p>
+        </div>
+        <div class="card">
+          <h3>Marketing Digital</h3>
+          <p>Campanas y posicionamiento basados en datos, no en intuicion.</p>
+        </div>
+        <div class="card">
+          <h3>Analitica Web</h3>
+          <p>Convierte tus datos en decisiones de negocio accionables.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Iconografia</h3>
+      <p>Estilo lineal, trazo fino (1.5px). Familia: Lucide o Heroicons Outline.</p>
+      <div class="icon-demo">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+        </div>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Fotografia</h3>
+      <div class="card">
+        <ul style="font-size: 0.9rem; padding-left: 1.25rem; color: var(--color-text-muted);">
+          <li style="margin-bottom: 0.5rem;">Blanco y negro o baja saturacion</li>
+          <li style="margin-bottom: 0.5rem;">Si hay color, que no compita con el cobalto</li>
+          <li style="margin-bottom: 0.5rem;">Fotos profesionales, no stock generico</li>
+          <li style="margin-bottom: 0.5rem;">Sin ilustraciones cartoon ni emojis decorativos</li>
+          <li>El sitio debe sentirse como si pudiera imprimirse en una revista de negocios</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- AI IMAGE STYLES -->
+  <div class="ai-section">
+    <div class="container">
+      <section id="ai-images">
+        <h2>Imagenes AI — Blog &amp; Contenido</h2>
+        <p class="subtitle">Sistema de generacion de thumbnails con Imagen 4 Ultra. 6 estilos visuales que mantienen consistencia de marca.</p>
+
+        <h3 style="margin-top: 2rem;">Paleta para AI Images</h3>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Colores permitidos en imagenes generadas. Todos los estilos usan esta paleta.</p>
+        <div class="ai-color-grid">
+          <div class="ai-color-chip" style="background: #051C2C;"><span>#051C2C</span></div>
+          <div class="ai-color-chip" style="background: #0a1628;"><span>#0a1628</span></div>
+          <div class="ai-color-chip" style="background: #1D4ED8;"><span>#1D4ED8</span></div>
+          <div class="ai-color-chip" style="background: #06b6d4;"><span>#06b6d4</span></div>
+          <div class="ai-color-chip" style="background: #2dd4bf;"><span>#2dd4bf</span></div>
+          <div class="ai-color-chip" style="background: #f97316;"><span>#f97316</span></div>
+          <div class="ai-color-chip" style="background: #7c3aed;"><span>#7c3aed</span></div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Catalogo de Estilos</h3>
+        <div class="ai-style-grid">
+
+          <!-- Style A -->
+          <div class="ai-style-card">
+            <div class="ai-card-preview" style="background: linear-gradient(135deg, #051C2C 0%, #0a2a4a 50%, #06b6d4 100%);"></div>
+            <div class="ai-card-body">
+              <h4>Style A — Particle Mesh Waves</h4>
+              <div class="ai-topics">Emprendimiento, liderazgo, RRHH, habilidades, management, marketing</div>
+              <span class="ai-badge">Mas versatil</span>
+              <span class="ai-badge">Default</span>
+              <div class="prompt-code">Deep blue digital landscape with glowing particle mesh wireframe waves {TOPIC_MODIFIER}. Shallow depth of field with bokeh light effects. Luminous cyan and blue tones with subtle warm orange particle accents floating above the surface. Dark navy background fading to deep blue. Futuristic ethereal data visualization aesthetic. No text no people no icons. Photorealistic 3D render quality. 16:9 landscape format.</div>
+            </div>
+          </div>
+
+          <!-- Style B -->
+          <div class="ai-style-card">
+            <div class="ai-card-preview" style="background: radial-gradient(circle at center, #1D4ED8 0%, #051C2C 70%);"></div>
+            <div class="ai-card-body">
+              <h4>Style B — Digital Globe</h4>
+              <div class="ai-topics">Internacional, SEO, comercio electronico, era digital, redes sociales, globalizacion</div>
+              <span class="ai-badge">Global</span>
+              <div class="prompt-code">Holographic digital globe floating in dark space, covered with luminous blue data streams and glowing network connection nodes across continents {TOPIC_MODIFIER}. Rectangular data particles and bokeh lights floating around the sphere. Deep navy blue and cobalt blue tones with subtle cyan highlights. Dark background. Photorealistic 3D render, cinematic lighting, shallow depth of field. No text no people no icons. 16:9 landscape format.</div>
+            </div>
+          </div>
+
+          <!-- Style C -->
+          <div class="ai-style-card">
+            <div class="ai-card-preview" style="background: linear-gradient(135deg, #0a1628 0%, #1D4ED8 50%, #7c3aed 100%);"></div>
+            <div class="ai-card-body">
+              <h4>Style C — Luminous Ribbon</h4>
+              <div class="ai-topics">Innovacion, creatividad, estrategia, frameworks, modelos de negocio</div>
+              <span class="ai-badge">Elegante</span>
+              <div class="prompt-code">Abstract luminous ribbon of light made of thousands of fine parallel lines flowing and twisting elegantly in 3D space {TOPIC_MODIFIER}. Glowing blue and purple gradient tones with subtle cyan edges. Deep dark navy background. Smooth flowing curves, ethereal and futuristic. Photorealistic 3D render with shallow depth of field and soft glow. No text no people no icons. 16:9 landscape format.</div>
+            </div>
+          </div>
+
+          <!-- Style D -->
+          <div class="ai-style-card">
+            <div class="ai-card-preview" style="background: conic-gradient(from 180deg, #051C2C, #06b6d4, #051C2C);"></div>
+            <div class="ai-card-body">
+              <h4>Style D — Data Vortex</h4>
+              <div class="ai-topics">Transformacion digital, tecnologia, IA, ciberseguridad, analytics</div>
+              <span class="ai-badge">Dinamico</span>
+              <div class="prompt-code">Abstract data flow vortex seen from low angle perspective {TOPIC_MODIFIER}. Thousands of luminous fiber optic lines swirling in a spiral pattern with glowing particles at the tips. Deep blue and teal cyan color palette with scattered white bokeh light points. Dark black background. Photorealistic 3D render, cinematic shallow depth of field. No text no people no icons. 16:9 landscape format.</div>
+            </div>
+          </div>
+
+          <!-- Style E -->
+          <div class="ai-style-card">
+            <div class="ai-card-preview" style="background: linear-gradient(180deg, #051C2C 0%, #0a2a4a 40%, #f97316 100%); opacity: 0.8;"></div>
+            <div class="ai-card-body">
+              <h4>Style E — Neural Network Surface</h4>
+              <div class="ai-topics">IA, people analytics, machine learning, automatizacion</div>
+              <span class="ai-badge">Tecnico</span>
+              <div class="prompt-code">Deep blue digital landscape with glowing particle mesh wireframe waves with neural network structure visible within the mesh {TOPIC_MODIFIER}, branching connections and synaptic nodes pulsing with light. Shallow depth of field with bokeh light effects. Luminous cyan and blue tones with subtle warm orange particle accents. Dark navy background. Futuristic ethereal data visualization aesthetic. No text no people no icons. Photorealistic 3D render quality. 16:9 landscape format.</div>
+            </div>
+          </div>
+
+          <!-- Style F -->
+          <div class="ai-style-card">
+            <div class="ai-card-preview" style="background: radial-gradient(circle at 30% 50%, #2dd4bf 0%, #051C2C 60%);"></div>
+            <div class="ai-card-body">
+              <h4>Style F — Fluid Sphere</h4>
+              <div class="ai-topics">Responsabilidad social, sustentabilidad, valores, cultura organizacional</div>
+              <span class="ai-badge">Organico</span>
+              <div class="prompt-code">Close-up of a sphere with swirling fluid marble patterns on its surface, luminous blue and teal tones with subtle orange veins {TOPIC_MODIFIER}. Dark navy background. Photorealistic 3D render, macro photography style, shallow depth of field. No text no people no icons. 16:9 landscape format.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Reglas de Asignacion</h3>
+        <div class="ai-rules">
+          <div class="ai-rule">
+            <h4>1. Un estilo por post</h4>
+            <p>Cada blog post recibe UN estilo basado en su tema principal. El {TOPIC_MODIFIER} se personaliza por articulo.</p>
+          </div>
+          <div class="ai-rule">
+            <h4>2. No repetir consecutivos</h4>
+            <p>Nunca usar el mismo estilo en posts consecutivos del grid del blog. Alternar para variedad visual.</p>
+          </div>
+          <div class="ai-rule">
+            <h4>3. Default: Style A</h4>
+            <p>Cuando el tema no encaja claramente en ningun estilo, usar Style A (particle mesh). Es el mas versatil.</p>
+          </div>
+          <div class="ai-rule">
+            <h4>4. Modelo: Ultra</h4>
+            <p>Siempre usar imagen-4.0-ultra para produccion. Fast solo para prototipos rapidos.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">API Configuration</h3>
+        <table class="scale-table" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);">
+          <thead>
+            <tr><th style="background: rgba(29,78,216,0.1); color: #60a5fa;">Propiedad</th><th style="background: rgba(29,78,216,0.1); color: #60a5fa;">Valor</th></tr>
+          </thead>
+          <tbody>
+            <tr style="color: rgba(255,255,255,0.6);"><td>Provider</td><td><code>Google Gemini / Imagen 4</code></td></tr>
+            <tr style="color: rgba(255,255,255,0.6);"><td>Model (prod)</td><td><code>imagen-4.0-ultra-generate-001</code></td></tr>
+            <tr style="color: rgba(255,255,255,0.6);"><td>Model (test)</td><td><code>imagen-4.0-fast-generate-001</code></td></tr>
+            <tr style="color: rgba(255,255,255,0.6);"><td>Endpoint</td><td><code>generativelanguage.googleapis.com/v1beta/models/{model}:predict</code></td></tr>
+            <tr style="color: rgba(255,255,255,0.6);"><td>Output</td><td>16:9 landscape, ~1-1.5MB PNG</td></tr>
+            <tr style="color: rgba(255,255,255,0.6); border-bottom: none;"><td>Restricciones</td><td>No text, no people, no icons</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <!-- MOCKUP -->
+  <div class="container">
+    <section id="mockup">
+      <h2>Mockup — Homepage</h2>
+      <p class="subtitle">Asi se ve la marca aplicada en contexto real.</p>
+
+      <div class="mockup-frame">
+        <div class="mockup-browser-bar">
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <span class="mockup-url">miguelcantu.mba</span>
+        </div>
+        <div class="mockup-content">
+          <div class="mockup-nav">
+            <span class="mockup-nav-brand">Miguel Cantu</span>
+            <div class="mockup-nav-links">
+              <span>Sobre mi</span>
+              <span>Blog</span>
+              <span>Contacto</span>
+            </div>
+          </div>
+          <div class="mockup-hero">
+            <h2>Transformacion Digital<br>con Estrategia</h2>
+            <p>Consultoria para empresas que quieren crecer con claridad. 15 anos ayudando a directores a tomar mejores decisiones digitales.</p>
+            <a class="btn btn-primary">Agendar Consulta</a>
+          </div>
+          <div class="mockup-footer">
+            Miguel Cantu &copy; 2026. Todos los derechos reservados.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <strong>Miguel Cantu</strong> — Brand Guidelines v1.1 — Abril 2026<br>
+    Este documento es la referencia oficial de identidad visual y verbal.
+  </footer>
+
+</body>
+</html>
