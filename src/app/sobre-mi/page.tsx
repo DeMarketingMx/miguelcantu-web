@@ -130,7 +130,7 @@ export default function SobreMi() {
           <FadeIn>
             <div className="aspect-[3/4] overflow-hidden rounded-lg shadow-xl ring-1 ring-black/5">
               <img
-                src="/miguel-portrait.png"
+                src="/miguel-portrait.webp"
                 alt="Miguel Cantu - Retrato profesional"
                 className="h-full w-full object-cover"
               />
@@ -335,7 +335,7 @@ export default function SobreMi() {
           <FadeIn delay={0.2} direction="right">
             <div className="aspect-video overflow-hidden rounded-lg shadow-xl ring-1 ring-black/5">
               <img
-                src="/miguel-mission.png"
+                src="/miguel-mission.webp"
                 alt="Miguel Cantu impartiendo clase"
                 className="h-full w-full object-cover"
               />

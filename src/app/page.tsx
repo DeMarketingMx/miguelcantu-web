@@ -163,7 +163,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-lg shadow-2xl ring-1 ring-black/10">
                 <img
-                  src="/miguel-hero.png"
+                  src="/miguel-hero.webp"
                   alt="Miguel Cantu - Consultor de Transformacion Digital"
                   className="h-full w-full object-cover"
                 />
@@ -277,7 +277,7 @@ export default function Home() {
           <FadeIn direction="left">
             <div className="aspect-[4/3] overflow-hidden rounded-lg shadow-xl ring-1 ring-white/10">
               <img
-                src="/miguel-knowledge.png"
+                src="/miguel-knowledge.webp"
                 alt="Miguel Cantu en conferencia de consultoria"
                 className="h-full w-full object-cover"
               />

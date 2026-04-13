@@ -86,7 +86,7 @@ export function getBlogPosts(): BlogPost[] {
       }) : "",
       dateISO: data.date ? new Date(data.date).toISOString() : "",
       readingTime: stats.text.replace("read", "de lectura").replace("min", "min"),
-      thumbnail: data.thumbnail || `/blog/${slug}.png`,
+      thumbnail: data.thumbnail || `/blog/${slug}.webp`,
       category: data.category || inferCategory(slug, title),
       content: rendered.html,
       headings: rendered.headings,

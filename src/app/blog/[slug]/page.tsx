@@ -146,7 +146,7 @@ export default async function BlogPost({ params }: Props) {
         <div className="mb-12 flex items-center gap-4 border-b border-border pb-8">
           <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full shadow-md ring-2 ring-accent/20">
             <img
-              src="/miguel-avatar.png"
+              src="/miguel-avatar.webp"
               alt="Miguel Cantu"
               className="h-full w-full object-cover"
             />
@@ -260,7 +260,7 @@ export default async function BlogPost({ params }: Props) {
                 <div className="flex items-center gap-3">
                   <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full shadow-md ring-2 ring-accent/20">
                     <img
-                      src="/miguel-avatar.png"
+                      src="/miguel-avatar.webp"
                       alt="Miguel Cantu"
                       className="h-full w-full object-cover"
                     />

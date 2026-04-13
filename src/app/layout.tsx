@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     title: "Miguel Cantu — Consultor en Marketing Digital y Transformacion Digital",
     description:
       "Consultoria estrategica en marketing digital, transformacion digital e inteligencia artificial para empresas que quieren crecer con claridad.",
-    images: [{ url: "/miguel-hero.png", width: 1200, height: 630, alt: "Miguel Cantu - Consultor Digital" }],
+    images: [{ url: "/miguel-hero.webp", width: 1200, height: 630, alt: "Miguel Cantu - Consultor Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Miguel Cantu — Consultor en Marketing Digital y Transformacion Digital",
     description: "Consultoria estrategica en marketing digital, transformacion digital e IA.",
-    images: ["/miguel-hero.png"],
+    images: ["/miguel-hero.webp"],
   },
 };
 
@@ -93,7 +93,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "@id": "https://www.miguelcantu.mba/#person",
                   name: "Miguel Cantu",
                   url: "https://www.miguelcantu.mba",
-                  image: "https://www.miguelcantu.mba/miguel-hero.png",
+                  image: "https://www.miguelcantu.mba/miguel-hero.webp",
                   jobTitle: "Consultor en Transformacion Digital e Inteligencia Artificial",
                   worksFor: { "@type": "Organization", name: "De Marketing" },
                   alumniOf: [
