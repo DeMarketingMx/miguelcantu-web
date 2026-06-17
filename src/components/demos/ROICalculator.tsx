@@ -41,8 +41,8 @@ export function ROICalculator() {
                   onClick={() => setIndustry(key)}
                   className={`block w-full text-left px-4 py-2.5 text-sm border transition-all ${
                     industry === key
-                      ? "bg-accent text-white border-accent"
-                      : "bg-surface text-primary border-border hover:border-accent"
+                      ? "bg-primary text-white border-primary"
+                      : "bg-surface text-primary border-border hover:border-primary"
                   }`}
                 >
                   {val.label}
@@ -54,7 +54,7 @@ export function ROICalculator() {
           <div>
             <div className="flex justify-between mb-2">
               <label className="text-xs font-semibold uppercase tracking-wider text-primary">Costo del servicio mensual</label>
-              <span className="text-sm font-bold text-accent">${serviceCost.toLocaleString()}</span>
+              <span className="text-sm font-bold text-primary">${serviceCost.toLocaleString()}</span>
             </div>
             <input
               type="range"
@@ -63,7 +63,7 @@ export function ROICalculator() {
               step={1000}
               value={serviceCost}
               onChange={(e) => setServiceCost(Number(e.target.value))}
-              className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent"
+              className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-primary"
             />
             <div className="flex justify-between text-xs text-text-muted mt-1">
               <span>$5,000</span>
@@ -74,7 +74,7 @@ export function ROICalculator() {
           <div>
             <div className="flex justify-between mb-2">
               <label className="text-xs font-semibold uppercase tracking-wider text-primary">Inversion en publicidad</label>
-              <span className="text-sm font-bold text-accent">${adBudget.toLocaleString()}</span>
+              <span className="text-sm font-bold text-primary">${adBudget.toLocaleString()}</span>
             </div>
             <input
               type="range"
@@ -83,7 +83,7 @@ export function ROICalculator() {
               step={1000}
               value={adBudget}
               onChange={(e) => setAdBudget(Number(e.target.value))}
-              className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent"
+              className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-primary"
             />
             <div className="flex justify-between text-xs text-text-muted mt-1">
               <span>$5,000</span>
@@ -132,7 +132,7 @@ export function ROICalculator() {
               <div className="text-2xl text-text-muted font-light">→</div>
               <div>
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-1">Revenue estimado</p>
-                <p className="text-2xl font-heading font-bold text-accent">${revenue.toLocaleString()}</p>
+                <p className="text-2xl font-heading font-bold text-primary">${revenue.toLocaleString()}</p>
               </div>
             </div>
 
@@ -164,11 +164,11 @@ export function ROICalculator() {
                   key={roi}
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="text-2xl font-heading font-bold text-accent"
+                  className="text-2xl font-heading font-bold text-primary"
                 >
                   {roi}%
                 </motion.p>
-                <p className="text-xs text-accent/70 mt-1">ROI estimado</p>
+                <p className="text-xs text-text-muted mt-1">ROI estimado</p>
               </div>
             </div>
 
@@ -195,7 +195,7 @@ export function ROICalculator() {
           </div>
 
           <div className="mt-6 p-4 bg-accent-light border border-accent/20">
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Proyeccion ilustrativa</p>
+            <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Proyeccion ilustrativa</p>
             <p className="text-sm text-primary">
               Con una inversion de ${totalInvestment.toLocaleString()} mensuales (${serviceCost.toLocaleString()} servicio + ${adBudget.toLocaleString()} publicidad) en {m.label.toLowerCase()}, el retorno estimado es de {roi}%.
             </p>

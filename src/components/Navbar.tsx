@@ -49,7 +49,7 @@ export function Navbar() {
 
         {/* Desktop */}
         <div className="hidden items-center gap-7 lg:flex">
-          <Link href="/" className="text-sm font-medium text-primary no-underline transition-colors hover:text-accent">
+          <Link href="/" className="text-sm font-medium text-primary no-underline transition-colors hover:text-navy-light">
             Home
           </Link>
 
@@ -59,7 +59,7 @@ export function Navbar() {
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => { setDropdownOpen(false); setActiveService(0); }}
           >
-            <button className="flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-accent">
+            <button className="flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-navy-light">
               Consultoria
               <ChevronDown size={14} className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
             </button>
@@ -76,7 +76,7 @@ export function Navbar() {
                         onMouseEnter={() => setActiveService(i)}
                         className={`block px-5 py-3 text-sm no-underline transition-all ${
                           activeService === i
-                            ? "bg-accent-light text-accent font-semibold"
+                            ? "bg-accent-light text-primary font-semibold"
                             : "text-primary hover:bg-accent-light/50"
                         }`}
                       >
@@ -87,7 +87,7 @@ export function Navbar() {
 
                   {/* Right - Preview */}
                   <div className="p-6 flex flex-col justify-center">
-                    <div className="mb-3 inline-flex items-center justify-center w-12 h-12 bg-accent-light">
+                    <div className="mb-3 inline-flex items-center justify-center w-12 h-12 bg-primary">
                       {(() => {
                         const Icon = serviceLinks[activeService].icon;
                         return <Icon size={24} className="text-accent" strokeWidth={1.5} />;
@@ -101,7 +101,7 @@ export function Navbar() {
                     </p>
                     <Link
                       href={serviceLinks[activeService].href}
-                      className="text-xs font-semibold uppercase tracking-wider text-accent no-underline hover:underline"
+                      className="text-xs font-semibold uppercase tracking-wider text-primary no-underline hover:underline"
                     >
                       Ver mas →
                     </Link>
@@ -111,13 +111,13 @@ export function Navbar() {
             )}
           </div>
 
-          <Link href="/sobre-mi" className="text-sm font-medium text-primary no-underline transition-colors hover:text-accent">
+          <Link href="/sobre-mi" className="text-sm font-medium text-primary no-underline transition-colors hover:text-navy-light">
             Sobre mi
           </Link>
-          <Link href="/blog" className="text-sm font-medium text-primary no-underline transition-colors hover:text-accent">
+          <Link href="/blog" className="text-sm font-medium text-primary no-underline transition-colors hover:text-navy-light">
             Blog
           </Link>
-          <Link href="/contacto" className="text-sm font-medium text-primary no-underline transition-colors hover:text-accent">
+          <Link href="/contacto" className="text-sm font-medium text-primary no-underline transition-colors hover:text-navy-light">
             Contacto
           </Link>
           <Link href="/contacto" className="btn btn-primary text-xs py-2.5 px-5">
@@ -144,9 +144,9 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-3 py-2.5 pl-2 text-sm text-primary no-underline hover:text-accent"
+                className="flex items-center gap-3 py-2.5 pl-2 text-sm text-primary no-underline hover:text-navy-light"
               >
-                <l.icon size={16} className="text-accent" strokeWidth={1.5} />
+                <l.icon size={16} className="text-primary" strokeWidth={1.5} />
                 {l.label}
               </Link>
             ))}

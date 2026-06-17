@@ -116,7 +116,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="bg-accent px-3 py-2 text-white transition-colors hover:bg-accent-hover"
+                className="bg-accent px-3 py-2 text-primary transition-colors hover:bg-accent-hover"
               >
                 <ArrowRight size={14} />
               </button>

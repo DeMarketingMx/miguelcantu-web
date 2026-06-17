@@ -145,8 +145,8 @@ export default function Home() {
             <span className="section-badge">Miguel Cantu — Consultor Estrategico</span>
             <h1 className="mb-4">Decisiones Digitales que Mueven Negocios</h1>
             <p className="mb-8 max-w-lg text-base leading-relaxed text-text-muted">
-              Asesoro a directores y C-suite en marketing digital, transformacion
-              digital e inteligencia artificial. Estrategia con datos, no con intuicion.
+              Miguel Cantú — fundador de De Marketing y Kuldu Café, autor del Método
+              Sísmico. Estrategia con datos para la alta dirección.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contacto" className="btn btn-primary">
@@ -193,7 +193,7 @@ export default function Home() {
           {stats.map((s, i) => (
             <FadeIn key={s.label} delay={i * 0.1}>
               <div className="text-center">
-                <s.icon size={24} className="mx-auto mb-3 text-accent" strokeWidth={1.5} />
+                <s.icon size={24} className="mx-auto mb-3 text-primary" strokeWidth={1.5} />
                 <AnimatedCounter end={s.number} suffix={s.suffix} label={s.label} />
               </div>
             </FadeIn>
@@ -220,10 +220,10 @@ export default function Home() {
             {services.map((s, i) => (
               <FadeIn key={s.title} delay={i * 0.1}>
                 <Link href={s.href} className="block card-hover no-underline h-full">
-                  <s.icon size={32} className="mb-4 text-accent" strokeWidth={1.5} />
+                  <s.icon size={32} className="mb-4 text-primary" strokeWidth={1.5} />
                   <h3 className="mb-3 text-lg">{s.title}</h3>
                   <p className="text-sm leading-relaxed text-text-muted">{s.description}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-accent">
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-primary">
                     Ver mas <ArrowRight size={12} />
                   </span>
                 </Link>
@@ -250,7 +250,7 @@ export default function Home() {
             {testimonials.map((t, i) => (
               <FadeIn key={t.initials} delay={i * 0.1}>
                 <div className="card-hover h-full flex flex-col">
-                  <Quote size={24} className="mb-4 text-accent/30" strokeWidth={1.5} />
+                  <Quote size={24} className="mb-4 text-primary/30" strokeWidth={1.5} />
                   <blockquote className="flex-1 text-sm leading-relaxed text-text-muted mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
@@ -358,7 +358,7 @@ export default function Home() {
                       />
                     </div>
                   )}
-                  <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-accent mb-2">
+                  <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-primary mb-2">
                     {post.category}
                   </span>
                   <h3 className="text-base mb-2 line-clamp-2">{post.title}</h3>
