@@ -26,11 +26,11 @@ export type BlogPost = {
 };
 
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
-  "Transformacion Digital": ["transformacion digital", "transformación digital", "revolucion digital", "era digital", "mundo digital", "e-business", "tecnologia exponencial", "ingenieria en transformacion"],
+  "Transformación Digital": ["transformacion digital", "transformación digital", "revolucion digital", "era digital", "mundo digital", "e-business", "tecnologia exponencial", "ingenieria en transformacion"],
   "Marketing Digital": ["marketing digital", "marketing pull", "marketing push", "redes sociales", "tik tok", "semrush", "manejo de redes", "contenido en redes", "mercadotecnia", "omnicanalidad", "agencia de marketing"],
   "Estrategia": ["planeacion estrategica", "objetivos smart", "analisis pestel", "framework", "modelo de negocio", "metodologia 5s", "metodologias agiles", "consultoria"],
   "Liderazgo": ["emprendedor", "lider", "jefe", "habilidades directivas", "cfo", "mujeres en", "miedo a cometer", "home office", "people analytics"],
-  "Innovacion": ["inteligencia artificial", "ciberseguridad", "comercio electronico", "ciudadania digital", "tecnologia en los adolescentes", "empresa socialmente responsable", "shared value", "creacion de negocios"],
+  "Innovación": ["inteligencia artificial", "ciberseguridad", "comercio electronico", "ciudadania digital", "tecnologia en los adolescentes", "empresa socialmente responsable", "shared value", "creacion de negocios"],
   "Negocio": ["asesoria de negocio", "desarrollo de negocio", "entornos vuca", "pymes"],
 };
 
