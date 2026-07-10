@@ -6,14 +6,14 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Agenda una consulta con Miguel Cantu. Transformacion digital estrategica para tu empresa.",
+    "Agenda una consulta con Miguel Cantú. Transformación digital estratégica para tu empresa.",
 };
 
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Ubicacion",
-    value: "Monterrey, Mexico",
+    title: "Ubicación",
+    value: "Monterrey, México",
   },
   {
     icon: Clock,
@@ -44,7 +44,7 @@ export default function Contacto() {
               Hablemos de tu Proyecto Digital
             </h2>
             <p className="mb-10 text-text-muted leading-relaxed">
-              ¿Tienes un proyecto de transformacion digital en mente? Agenda una
+              ¿Tienes un proyecto de transformación digital en mente? Agenda una
               consulta sin compromiso y exploremos juntos las oportunidades.
             </p>
 
@@ -54,7 +54,7 @@ export default function Contacto() {
                   key={c.title}
                   className="bg-surface p-5 shadow-sm border border-border"
                 >
-                  <c.icon size={24} className="mb-3 text-accent" strokeWidth={1.5} />
+                  <c.icon size={24} className="mb-3 text-primary" strokeWidth={1.5} />
                   <p className="text-sm font-semibold text-primary">{c.title}</p>
                   <p className="mt-1 text-sm text-text-muted">{c.value}</p>
                 </div>
@@ -64,9 +64,9 @@ export default function Contacto() {
 
           {/* Right - Form */}
           <div className="bg-surface p-8 shadow-md">
-            <h3 className="mb-2 text-xl">Agenda tu Consulta</h3>
+            <h3 className="mb-2 text-xl">Agenda tu diagnóstico</h3>
             <p className="mb-6 text-sm text-text-muted">
-              50+ empresas han confiado en mi consultoria
+              Más de 40 empresas han confiado en mi consultoría
             </p>
             <ContactForm />
 
@@ -78,7 +78,7 @@ export default function Contacto() {
                 "Datos 100% confidenciales",
               ].map((text) => (
                 <div key={text} className="flex items-center gap-2">
-                  <CheckCircle size={16} className="shrink-0 text-accent" strokeWidth={1.5} />
+                  <CheckCircle size={16} className="shrink-0 text-primary" strokeWidth={1.5} />
                   <span className="text-xs text-text-muted">{text}</span>
                 </div>
               ))}

@@ -32,7 +32,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
   return (
     <nav>
       <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
-        En este articulo
+        En este artículo
       </p>
       <ul className="space-y-2 border-l-2 border-border">
         {headings.map((h) => (
@@ -41,7 +41,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
               href={`#${h.id}`}
               className={`-ml-[2px] block border-l-2 py-1 pl-4 text-sm no-underline transition-colors ${
                 activeId === h.id
-                  ? "border-accent text-accent font-medium"
+                  ? "border-accent text-primary font-medium"
                   : "border-transparent text-text-muted hover:text-primary hover:border-border"
               }`}
             >

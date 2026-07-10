@@ -9,11 +9,11 @@ const serviceLinks = [
     href: "/consultoria/marketing-digital",
     label: "Marketing Digital",
     icon: Target,
-    description: "SEO, campanas, contenido y analitica para generar demanda real.",
+    description: "SEO, campañas, contenido y analítica para generar demanda real.",
   },
   {
     href: "/consultoria/transformacion-digital",
-    label: "Transformacion Digital",
+    label: "Transformación Digital",
     icon: TrendingUp,
     description: "Hoja de ruta para llevar tu empresa al siguiente nivel digital.",
   },
@@ -21,7 +21,7 @@ const serviceLinks = [
     href: "/consultoria/estrategia-digital",
     label: "Estrategia Digital",
     icon: BarChart3,
-    description: "Alineacion de tecnologia, procesos y personas.",
+    description: "Alineación de tecnología, procesos y personas.",
   },
   {
     href: "/consultoria/inteligencia-artificial",
@@ -42,9 +42,9 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-heading text-2xl font-bold text-primary no-underline tracking-tight"
+          className="font-heading text-2xl font-extrabold text-primary no-underline tracking-tight"
         >
-          Miguel Cantu, MBA, MBD
+          Miguel Cantú
         </Link>
 
         {/* Desktop */}
@@ -60,7 +60,7 @@ export function Navbar() {
             onMouseLeave={() => { setDropdownOpen(false); setActiveService(0); }}
           >
             <button className="flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-navy-light">
-              Consultoria
+              Consultoría
               <ChevronDown size={14} className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
             </button>
 
@@ -103,7 +103,7 @@ export function Navbar() {
                       href={serviceLinks[activeService].href}
                       className="text-xs font-semibold uppercase tracking-wider text-primary no-underline hover:underline"
                     >
-                      Ver mas →
+                      Ver más →
                     </Link>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ export function Navbar() {
           </div>
 
           <Link href="/sobre-mi" className="text-sm font-medium text-primary no-underline transition-colors hover:text-navy-light">
-            Sobre mi
+            Sobre mí
           </Link>
           <Link href="/blog" className="text-sm font-medium text-primary no-underline transition-colors hover:text-navy-light">
             Blog
@@ -121,12 +121,12 @@ export function Navbar() {
             Contacto
           </Link>
           <Link href="/contacto" className="btn btn-primary text-xs py-2.5 px-5">
-            Agendar Consulta
+            Agendar diagnóstico
           </Link>
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="text-primary lg:hidden" aria-label="Menu">
+        <button onClick={() => setOpen(!open)} className="text-primary lg:hidden" aria-label="Menú">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -138,7 +138,7 @@ export function Navbar() {
             Home
           </Link>
           <div className="border-b border-border py-2">
-            <p className="py-2 text-xs font-semibold uppercase tracking-wider text-text-muted">Consultoria</p>
+            <p className="py-2 text-xs font-semibold uppercase tracking-wider text-text-muted">Consultoría</p>
             {serviceLinks.map((l) => (
               <Link
                 key={l.href}
@@ -152,7 +152,7 @@ export function Navbar() {
             ))}
           </div>
           <Link href="/sobre-mi" onClick={() => setOpen(false)} className="block py-3 text-sm font-medium text-primary no-underline border-b border-border">
-            Sobre mi
+            Sobre mí
           </Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="block py-3 text-sm font-medium text-primary no-underline border-b border-border">
             Blog
@@ -161,7 +161,7 @@ export function Navbar() {
             Contacto
           </Link>
           <Link href="/contacto" onClick={() => setOpen(false)} className="btn btn-primary mt-4 w-full text-xs">
-            Agendar Consulta
+            Agendar diagnóstico
           </Link>
         </div>
       )}

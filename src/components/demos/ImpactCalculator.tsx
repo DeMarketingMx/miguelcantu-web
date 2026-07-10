@@ -21,8 +21,8 @@ const sizes = [
 const metrics = [
   { key: "seo", label: "SEO y Posicionamiento" },
   { key: "social", label: "Redes Sociales" },
-  { key: "automation", label: "Automatizacion" },
-  { key: "analytics", label: "Analitica de Datos" },
+  { key: "automation", label: "Automatización" },
+  { key: "analytics", label: "Analítica de Datos" },
   { key: "cx", label: "Experiencia Digital" },
 ];
 
@@ -47,7 +47,7 @@ export function ImpactCalculator() {
   return (
     <div className="bg-surface border border-border p-8">
       <h3 className="text-lg font-semibold text-primary mb-1">Calculadora de Impacto Digital</h3>
-      <p className="text-sm text-text-muted mb-8">Selecciona tu industria y tamano para ver tu benchmark digital.</p>
+      <p className="text-sm text-text-muted mb-8">Selecciona tu industria y tamaño para ver tu benchmark digital.</p>
 
       <div className="grid gap-8 md:grid-cols-2">
         {/* Controls */}
@@ -61,7 +61,7 @@ export function ImpactCalculator() {
                   onClick={() => setIndustry(ind.id)}
                   className={`block w-full text-left px-4 py-2.5 text-sm border transition-all ${
                     industry === ind.id
-                      ? "bg-accent text-white border-accent"
+                      ? "bg-accent text-primary border-accent"
                       : "bg-surface text-primary border-border hover:border-accent"
                   }`}
                 >
@@ -72,7 +72,7 @@ export function ImpactCalculator() {
           </div>
 
           <div>
-            <label className="text-xs font-semibold uppercase tracking-wider text-primary mb-3 block">Tamano de empresa</label>
+            <label className="text-xs font-semibold uppercase tracking-wider text-primary mb-3 block">Tamaño de empresa</label>
             <div className="grid grid-cols-2 gap-2">
               {sizes.map((s) => (
                 <button
@@ -80,7 +80,7 @@ export function ImpactCalculator() {
                   onClick={() => setSize(s.id)}
                   className={`px-3 py-2.5 text-xs font-semibold border transition-all ${
                     size === s.id
-                      ? "bg-accent text-white border-accent"
+                      ? "bg-accent text-primary border-accent"
                       : "bg-surface text-primary border-border hover:border-accent"
                   }`}
                 >
@@ -100,7 +100,7 @@ export function ImpactCalculator() {
             </div>
             <div className="mb-1">
               <p className="text-xs uppercase tracking-wider text-text-muted mb-1">Oportunidad de mejora</p>
-              <p className="text-2xl font-heading font-bold text-accent">{opportunity}%</p>
+              <p className="text-2xl font-heading font-bold text-primary">{opportunity}%</p>
             </div>
           </div>
 
@@ -131,11 +131,11 @@ export function ImpactCalculator() {
           </div>
 
           <div className="mt-6 p-4 bg-accent-light border border-accent/20">
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Insight</p>
+            <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Insight</p>
             <p className="text-sm text-primary">
               {opportunity > 40
                 ? `Tu industria tiene un ${opportunity}% de oportunidad de mejora digital. Una estrategia bien ejecutada puede generar ventaja competitiva significativa.`
-                : `Tu industria ya tiene buena adopcion digital (${avgScore}%). El diferenciador esta en la optimizacion y la inteligencia artificial aplicada.`}
+                : `Tu industria ya tiene buena adopción digital (${avgScore}%). El diferenciador está en la optimización y la inteligencia artificial aplicada.`}
             </p>
           </div>
         </div>

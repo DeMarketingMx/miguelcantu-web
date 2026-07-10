@@ -22,24 +22,24 @@ export function FunnelDemo() {
 
   return (
     <div className="bg-surface border border-border p-8">
-      <h3 className="text-lg font-semibold text-primary mb-1">Simulador de Funnel de Conversion</h3>
-      <p className="text-sm text-text-muted mb-8">Mueve los sliders y ve como cambian tus resultados.</p>
+      <h3 className="text-lg font-semibold text-primary mb-1">Simulador de Funnel de Conversión</h3>
+      <p className="text-sm text-text-muted mb-8">Mueve los sliders y ve cómo cambian tus resultados.</p>
 
       <div className="grid gap-8 md:grid-cols-2">
         {/* Controls */}
         <div className="space-y-6">
           <div>
             <div className="flex justify-between mb-2">
-              <label className="text-xs font-semibold uppercase tracking-wider text-primary">Trafico mensual</label>
-              <span className="text-sm font-bold text-accent">{traffic.toLocaleString()}</span>
+              <label className="text-xs font-semibold uppercase tracking-wider text-primary">Tráfico mensual</label>
+              <span className="text-sm font-bold text-primary">{traffic.toLocaleString()}</span>
             </div>
             <input type="range" min={1000} max={50000} step={500} value={traffic} onChange={(e) => setTraffic(Number(e.target.value))}
               className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent" />
           </div>
           <div>
             <div className="flex justify-between mb-2">
-              <label className="text-xs font-semibold uppercase tracking-wider text-primary">Tasa de conversion a lead</label>
-              <span className="text-sm font-bold text-accent">{convRate}%</span>
+              <label className="text-xs font-semibold uppercase tracking-wider text-primary">Tasa de conversión a lead</label>
+              <span className="text-sm font-bold text-primary">{convRate}%</span>
             </div>
             <input type="range" min={0.5} max={15} step={0.5} value={convRate} onChange={(e) => setConvRate(Number(e.target.value))}
               className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent" />
@@ -47,7 +47,7 @@ export function FunnelDemo() {
           <div>
             <div className="flex justify-between mb-2">
               <label className="text-xs font-semibold uppercase tracking-wider text-primary">Tasa de cierre</label>
-              <span className="text-sm font-bold text-accent">{closeRate}%</span>
+              <span className="text-sm font-bold text-primary">{closeRate}%</span>
             </div>
             <input type="range" min={5} max={60} step={5} value={closeRate} onChange={(e) => setCloseRate(Number(e.target.value))}
               className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent" />
@@ -55,7 +55,7 @@ export function FunnelDemo() {
           <div>
             <div className="flex justify-between mb-2">
               <label className="text-xs font-semibold uppercase tracking-wider text-primary">Ticket promedio (MXN)</label>
-              <span className="text-sm font-bold text-accent">${avgTicket.toLocaleString()}</span>
+              <span className="text-sm font-bold text-primary">${avgTicket.toLocaleString()}</span>
             </div>
             <input type="range" min={1000} max={100000} step={1000} value={avgTicket} onChange={(e) => setAvgTicket(Number(e.target.value))}
               className="w-full h-1.5 bg-border rounded-none appearance-none cursor-pointer accent-accent" />
@@ -71,18 +71,18 @@ export function FunnelDemo() {
                 animate={{ width: `${Math.max(s.width, 8)}%` }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                {i === 3 && <span className="text-xs font-bold text-white">{s.value}</span>}
+                {i === 3 && <span className="text-xs font-bold text-primary">{s.value}</span>}
               </motion.div>
               <div className="shrink-0">
                 <p className="text-xs font-semibold text-primary">{s.label}</p>
                 {i < 3 && <p className="text-lg font-heading font-bold text-primary">{s.value}</p>}
-                {i === 3 && <p className="text-lg font-heading font-bold text-accent">{s.value}</p>}
+                {i === 3 && <p className="text-lg font-heading font-bold text-primary">{s.value}</p>}
               </div>
             </div>
           ))}
           <div className="border-t border-border pt-4 mt-4">
             <p className="text-xs text-text-muted uppercase tracking-wider">Revenue mensual estimado</p>
-            <p className="text-2xl font-heading font-bold text-accent">${revenue.toLocaleString()} MXN</p>
+            <p className="text-2xl font-heading font-bold text-primary">${revenue.toLocaleString()} MXN</p>
           </div>
         </div>
       </div>

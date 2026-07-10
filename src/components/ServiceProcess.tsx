@@ -27,7 +27,7 @@ export function ServiceProcess({ steps }: { steps: Step[] }) {
           {i < steps.length - 1 && (
             <div className="hidden md:block absolute top-5 left-[60%] w-[80%] h-px bg-border" />
           )}
-          <span className="inline-flex items-center justify-center w-10 h-10 bg-accent text-white text-sm font-bold mb-4">
+          <span className="inline-flex items-center justify-center w-10 h-10 bg-accent text-primary text-sm font-bold mb-4">
             {step.number}
           </span>
           <h4 className="text-base font-semibold text-primary mb-2">{step.title}</h4>

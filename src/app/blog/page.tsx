@@ -6,7 +6,7 @@ import BlogGrid from "@/components/BlogGrid";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Articulos sobre transformacion digital, marketing estrategico, analitica y tendencias de negocio.",
+    "Artículos sobre transformación digital, marketing estratégico, analítica y tendencias de negocio.",
 };
 
 export default function Blog() {
@@ -29,10 +29,10 @@ export default function Blog() {
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-14">
             <span className="section-badge">Insights</span>
-            <h2>Articulos y Reflexiones</h2>
+            <h2>Artículos y Reflexiones</h2>
             <p className="mt-4 max-w-lg text-text-muted">
-              Ideas sobre transformacion digital, marketing y estrategia de
-              datos para lideres de negocio.
+              Ideas sobre transformación digital, marketing y estrategia de
+              datos para líderes de negocio.
             </p>
           </div>
 

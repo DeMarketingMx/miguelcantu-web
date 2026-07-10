@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand Colors — De Marketing identity */
+  /* Brand Colors - De Marketing identity */
   --color-primary: #16273f;
   --color-accent: #9be564;
   --color-accent-hover: #7fd33f;
@@ -19,7 +19,7 @@
   --shadow-md: 0 4px 12px rgba(22, 39, 63, 0.08);
   --shadow-lg: 0 8px 24px rgba(22, 39, 63, 0.12);
 
-  /* Fonts — De Marketing uses Inter throughout */
+  /* Fonts - De Marketing uses Inter throughout */
   --font-heading: var(--font-inter);
   --font-body: var(--font-inter);
 }
@@ -116,7 +116,7 @@ h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Primary CTA — De Marketing signature: lime fill, navy text */
+/* Primary CTA - De Marketing signature: lime fill, navy text */
 .btn-primary {
   background: var(--color-accent);
   color: var(--color-primary);
@@ -252,6 +252,62 @@ h4, h5, h6 {
 .prose-legal strong {
   color: var(--color-primary);
   font-weight: 600;
+}
+
+/* 3D book (El Método Sísmico) — pure CSS, matches sismico.demarketing.mx */
+.book3d {
+  perspective: 1600px;
+}
+
+.book3d__inner {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  transform-style: preserve-3d;
+  transform: rotateY(-25deg);
+  transition: transform 0.5s ease;
+}
+
+.book3d:hover .book3d__inner {
+  transform: rotateY(-14deg);
+}
+
+.book3d__cover {
+  position: absolute;
+  inset: 0;
+  transform: translateZ(12px);
+  border-radius: 2px 5px 5px 2px;
+  overflow: hidden;
+  background: #fafafa;
+  box-shadow: 0 30px 45px -20px rgba(22, 39, 63, 0.55);
+}
+
+.book3d__cover svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.book3d__spine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 100%;
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+  background: linear-gradient(90deg, #0f1b2e, #16273f);
+  border-radius: 2px 0 0 2px;
+}
+
+.book3d__pages {
+  position: absolute;
+  top: 1.5%;
+  right: 0;
+  width: 24px;
+  height: 97%;
+  transform-origin: right center;
+  transform: rotateY(90deg);
+  background: repeating-linear-gradient(to right, #d8dad6 0 1.5px, #fbfbfa 1.5px 4px);
 }
 
 /* Fallback: users with reduced motion always see content */

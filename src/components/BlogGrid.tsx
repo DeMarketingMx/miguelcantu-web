@@ -59,8 +59,8 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
             onClick={() => changeCategory(cat)}
             className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
               activeCategory === cat
-                ? "bg-accent text-white"
-                : "bg-surface text-text-muted border border-border hover:border-accent hover:text-accent"
+                ? "bg-accent text-primary"
+                : "bg-surface text-text-muted border border-border hover:border-accent hover:text-primary"
             }`}
           >
             {cat}
@@ -87,10 +87,10 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <span className="text-xs font-semibold uppercase tracking-wider text-accent">
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary">
               {featured.category}
             </span>
-            <h3 className="mt-2 text-2xl leading-tight group-hover:text-accent transition-colors">
+            <h3 className="mt-2 text-2xl leading-tight group-hover:text-primary transition-colors">
               {featured.title}
             </h3>
             <p className="mt-2 text-xs text-text-muted">
@@ -120,10 +120,10 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
               />
             </div>
             <div className="mt-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-accent">
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                 {post.category}
               </span>
-              <h3 className="mt-1.5 text-lg leading-snug group-hover:text-accent transition-colors">
+              <h3 className="mt-1.5 text-lg leading-snug group-hover:text-primary transition-colors">
                 {post.title}
               </h3>
               <p className="mt-2 text-xs text-text-muted">
@@ -138,7 +138,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
       {/* Empty state */}
       {grid.length === 0 && !featured && (
         <p className="py-12 text-center text-text-muted">
-          No hay articulos en esta categoria.
+          No hay artículos en esta categoría.
         </p>
       )}
 
@@ -159,8 +159,8 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
               onClick={() => changePage(page)}
               className={`flex h-10 w-10 items-center justify-center rounded-md text-sm font-medium transition-colors ${
                 currentPage === page
-                  ? "bg-accent text-white"
-                  : "border border-border hover:border-accent hover:text-accent"
+                  ? "bg-accent text-primary"
+                  : "border border-border hover:border-accent hover:text-primary"
               }`}
             >
               {page}
@@ -179,9 +179,9 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
 
       {/* Results count */}
       <p className="mt-4 text-center text-xs text-text-muted">
-        {filtered.length} articulo{filtered.length !== 1 ? "s" : ""}
+        {filtered.length} artículo{filtered.length !== 1 ? "s" : ""}
         {activeCategory !== "Todos" && ` en ${activeCategory}`}
-        {totalPages > 1 && ` · Pagina ${currentPage} de ${totalPages}`}
+        {totalPages > 1 && ` · Página ${currentPage} de ${totalPages}`}
       </p>
     </>
   );

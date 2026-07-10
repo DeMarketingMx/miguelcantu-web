@@ -4,61 +4,59 @@ import { ArrowRight, Compass, LineChart, Lightbulb, Puzzle, Gauge, Globe, Award,
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ServiceProcess } from "@/components/ServiceProcess";
 import { StrategyVisual } from "@/components/StrategyVisual";
-import { BackgroundPattern } from "@/components/BackgroundPattern";
-import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FadeIn } from "@/components/FadeIn";
 import { ImpactCalculator } from "@/components/demos/ImpactCalculator";
 
 export const metadata: Metadata = {
-  title: "Consultor en Estrategia Digital — Alineacion de Tecnologia y Negocio",
+  title: "Consultor en Estrategia Digital - Alineación de Tecnología y Negocio",
   description:
-    "Miguel Cantu es consultor en estrategia digital. Alinea tecnologia, procesos y personas para maximizar el impacto digital en tu negocio.",
+    "Miguel Cantú es consultor en estrategia digital. Alinea tecnología, procesos y personas para maximizar el impacto digital en tu negocio.",
 };
 
 const capabilities = [
-  { icon: Compass, title: "Vision Digital", description: "Definicion del norte digital de tu empresa alineado a la estrategia de negocio." },
-  { icon: LineChart, title: "Modelo de Datos", description: "Arquitectura de datos y analitica para tomar decisiones informadas." },
-  { icon: Lightbulb, title: "Innovacion Digital", description: "Identificacion de oportunidades de innovacion y diferenciacion digital." },
-  { icon: Puzzle, title: "Integracion de Canales", description: "Estrategia omnicanal que conecta todos los puntos de contacto digitales." },
-  { icon: Gauge, title: "Performance Digital", description: "KPIs, dashboards y mecanismos de medicion para cada iniciativa." },
+  { icon: Compass, title: "Visión Digital", description: "Definición del norte digital de tu empresa alineado a la estrategia de negocio." },
+  { icon: LineChart, title: "Modelo de Datos", description: "Arquitectura de datos y analítica para tomar decisiones informadas." },
+  { icon: Lightbulb, title: "Innovación Digital", description: "Identificación de oportunidades de innovación y diferenciación digital." },
+  { icon: Puzzle, title: "Integración de Canales", description: "Estrategia omnicanal que conecta todos los puntos de contacto digitales." },
+  { icon: Gauge, title: "Performance Digital", description: "KPIs, dashboards y mecanismos de medición para cada iniciativa." },
   { icon: Globe, title: "Presencia Digital", description: "Estrategia de web, SEO, redes sociales y ecosistema digital completo." },
 ];
 
 const process = [
   { number: "01", title: "Descubrimiento", description: "Entendimiento profundo de tu negocio, mercado y capacidades digitales actuales." },
-  { number: "02", title: "Analisis", description: "Benchmarking, gaps, oportunidades y priorizacion de iniciativas." },
-  { number: "03", title: "Estrategia", description: "Plan integral con vision, objetivos, iniciativas y metricas de exito." },
-  { number: "04", title: "Activacion", description: "Implementacion por fases con acompanamiento y medicion continua." },
+  { number: "02", title: "Análisis", description: "Benchmarking, gaps, oportunidades y priorización de iniciativas." },
+  { number: "03", title: "Estrategia", description: "Plan integral con visión, objetivos, iniciativas y métricas de éxito." },
+  { number: "04", title: "Activación", description: "Implementación por fases con acompañamiento y medición continua." },
 ];
 
 const certRibbon = [
-  { icon: GraduationCap, text: "MBA Transformacion Digital — IEBS" },
-  { icon: GraduationCap, text: "Maestria Analitica — EGADE" },
-  { icon: Globe, text: "Micromaster — Boston University" },
-  { icon: Award, text: "Estrategia Conectada — Wharton" },
+  { icon: GraduationCap, text: "MBA Transformación Digital, IEBS" },
+  { icon: GraduationCap, text: "Maestría Analítica, EGADE" },
+  { icon: Globe, text: "Micromaster, Boston University" },
+  { icon: Award, text: "Estrategia Conectada, Wharton" },
   { icon: BookOpen, text: "7+ Certificaciones Digitales" },
 ];
 
 const faqs = [
   {
-    q: "¿Cual es la diferencia entre estrategia digital y marketing digital?",
-    a: "La estrategia digital es el marco completo que define como tu empresa usa la tecnologia para competir y crecer. El marketing digital es uno de sus componentes. Una estrategia digital abarca procesos, datos, tecnologia, personas y canales — no solo campanas publicitarias.",
+    q: "¿Cuál es la diferencia entre estrategia digital y marketing digital?",
+    a: "La estrategia digital es el marco completo que define cómo tu empresa usa la tecnología para competir y crecer. El marketing digital es uno de sus componentes. Una estrategia digital abarca procesos, datos, tecnología, personas y canales, no solo campañas publicitarias.",
   },
   {
-    q: "¿Que entregables recibo de una consultoria en estrategia digital?",
-    a: "Recibes un diagnostico de madurez digital, un documento de estrategia con vision, objetivos y KPIs, una hoja de ruta priorizada por fases con timeline y presupuesto estimado, y un dashboard de seguimiento. Todo documentado y accionable para tu equipo.",
+    q: "¿Qué entregables recibo de una consultoría en estrategia digital?",
+    a: "Recibes un diagnóstico de madurez digital, un documento de estrategia con visión, objetivos y KPIs, una hoja de ruta priorizada por fases con timeline y presupuesto estimado, y un dashboard de seguimiento. Todo documentado y accionable para tu equipo.",
   },
   {
-    q: "¿Como se implementa la estrategia digital una vez definida?",
-    a: "La implementacion se hace por fases priorizadas segun impacto y factibilidad. Empezamos con quick wins que generan resultados rapidos, luego avanzamos a proyectos de mayor alcance. Puedo acompanar la ejecucion o capacitar a tu equipo interno para llevarla adelante.",
+    q: "¿Cómo se implementa la estrategia digital una vez definida?",
+    a: "La implementación se hace por fases priorizadas según impacto y factibilidad. Empezamos con quick wins que generan resultados rápidos, luego avanzamos a proyectos de mayor alcance. Puedo acompañar la ejecución o capacitar a tu equipo interno para llevarla adelante.",
   },
   {
-    q: "¿Cuanto tiempo toma disenar una estrategia digital?",
-    a: "El proceso de diagnostico y diseno estrategico tipicamente toma de 4 a 8 semanas, dependiendo del tamano de la empresa y la complejidad del ecosistema digital. Incluye entrevistas con stakeholders, analisis de datos y benchmarking competitivo.",
+    q: "¿Cuánto tiempo toma diseñar una estrategia digital?",
+    a: "El proceso de diagnóstico y diseño estratégico típicamente toma de 4 a 8 semanas, dependiendo del tamaño de la empresa y la complejidad del ecosistema digital. Incluye entrevistas con stakeholders, análisis de datos y benchmarking competitivo.",
   },
   {
     q: "¿La estrategia digital aplica para empresas que apenas inician en digital?",
-    a: "Absolutamente. De hecho, es el mejor momento para hacerlo. Empezar con una estrategia clara evita invertir en herramientas o canales equivocados. Diseñamos una hoja de ruta que escala gradualmente segun tus recursos y prioridades de negocio.",
+    a: "Absolutamente. De hecho, es el mejor momento para hacerlo. Empezar con una estrategia clara evita invertir en herramientas o canales equivocados. Diseñamos una hoja de ruta que escala gradualmente según tus recursos y prioridades de negocio.",
   },
 ];
 
@@ -84,7 +82,7 @@ export default function EstrategiaDigital() {
         <p className="breadcrumb">
           <Link href="/">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/">Consultoria</Link>
+          <Link href="/">Consultoría</Link>
           <span className="mx-2">/</span>
           <span>Estrategia Digital</span>
         </p>
@@ -92,19 +90,18 @@ export default function EstrategiaDigital() {
 
       {/* Intro with strategy radar */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn>
             <span className="section-badge">Estrategia Digital</span>
-            <h2 className="mb-6">Estrategia Digital que Conecta Tecnologia con Negocio</h2>
+            <h2 className="mb-6">Estrategia Digital que Conecta Tecnología con Negocio</h2>
             <p className="mb-6 text-text-muted leading-relaxed">
-              La mayoria de las empresas tienen herramientas digitales. Pocas
+              La mayoría de las empresas tienen herramientas digitales. Pocas
               tienen una estrategia digital. Como consultor en estrategia
-              digital, ayudo a alinear tecnologia, procesos y personas para que
-              cada inversion digital tenga impacto real.
+              digital, ayudo a alinear tecnología, procesos y personas para que
+              cada inversión digital tenga impacto real.
             </p>
             <Link href="/contacto" className="btn btn-primary">
-              Disenar mi Estrategia <ArrowRight size={16} />
+              Diseñar mi Estrategia <ArrowRight size={16} />
             </Link>
           </FadeIn>
           <FadeIn delay={0.2} direction="right">
@@ -132,14 +129,13 @@ export default function EstrategiaDigital() {
 
       {/* Interactive Demo */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="grid" />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-10">
               <span className="section-badge">Demo Interactivo</span>
               <h2>Calculadora de Impacto Digital</h2>
               <p className="mt-4 mx-auto max-w-lg text-text-muted">
-                Selecciona tu industria y tamano de empresa para ver tu benchmark digital vs el mercado.
+                Selecciona tu industria y tamaño de empresa para ver tu benchmark digital vs el mercado.
               </p>
             </div>
           </FadeIn>
@@ -162,7 +158,7 @@ export default function EstrategiaDigital() {
             {capabilities.map((c, i) => (
               <FadeIn key={c.title} delay={i * 0.08}>
                 <div className="card-hover h-full">
-                  <c.icon size={28} className="mb-4 text-accent" strokeWidth={1.5} />
+                  <c.icon size={28} className="mb-4 text-primary" strokeWidth={1.5} />
                   <h3 className="mb-2 text-base font-semibold">{c.title}</h3>
                   <p className="text-sm text-text-muted leading-relaxed">{c.description}</p>
                 </div>
@@ -177,7 +173,7 @@ export default function EstrategiaDigital() {
         <div className="mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="section-badge">Metodologia</span>
+              <span className="section-badge">Metodología</span>
               <h2>Mi Proceso de Estrategia Digital</h2>
             </div>
           </FadeIn>
@@ -221,7 +217,7 @@ export default function EstrategiaDigital() {
               Agenda una consulta y definamos juntos la estrategia digital que tu negocio necesita.
             </p>
             <Link href="/contacto" className="btn btn-white">
-              Agendar Consulta <ArrowRight size={16} />
+              Agendar diagnóstico <ArrowRight size={16} />
             </Link>
           </FadeIn>
         </div>

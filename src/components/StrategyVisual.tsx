@@ -8,12 +8,12 @@ import { motion, useInView } from "framer-motion";
  * Shows interconnected pillars radiating from a central strategy hub.
  */
 const pillars = [
-  { label: "Tecnologia", angle: -90 },
+  { label: "Tecnología", angle: -90 },
   { label: "Personas", angle: -30 },
   { label: "Datos", angle: 30 },
   { label: "Procesos", angle: 90 },
   { label: "Canales", angle: 150 },
-  { label: "Innovacion", angle: 210 },
+  { label: "Innovación", angle: 210 },
 ];
 
 export function StrategyVisual() {

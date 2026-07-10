@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 
 const dimensions = [
   { id: "strategy", label: "Estrategia Digital", question: "¿Tu empresa tiene una estrategia digital documentada?" },
-  { id: "data", label: "Cultura de Datos", question: "¿Las decisiones se toman con datos o por intuicion?" },
-  { id: "tech", label: "Tecnologia", question: "¿Que tan actualizadas estan tus herramientas digitales?" },
+  { id: "data", label: "Cultura de Datos", question: "¿Las decisiones se toman con datos o por intuición?" },
+  { id: "tech", label: "Tecnología", question: "¿Qué tan actualizadas están tus herramientas digitales?" },
   { id: "people", label: "Personas", question: "¿Tu equipo tiene habilidades digitales adecuadas?" },
-  { id: "process", label: "Procesos", question: "¿Que tan digitalizados estan tus procesos internos?" },
-  { id: "cx", label: "Experiencia Cliente", question: "¿Que tan digital es la experiencia de tus clientes?" },
+  { id: "process", label: "Procesos", question: "¿Qué tan digitalizados están tus procesos internos?" },
+  { id: "cx", label: "Experiencia Cliente", question: "¿Qué tan digital es la experiencia de tus clientes?" },
 ];
 
 const levels = [
-  { value: 1, label: "Basico" },
+  { value: 1, label: "Básico" },
   { value: 2, label: "En desarrollo" },
   { value: 3, label: "Intermedio" },
   { value: 4, label: "Avanzado" },
-  { value: 5, label: "Lider" },
+  { value: 5, label: "Líder" },
 ];
 
 export function MaturityAssessment() {
@@ -45,7 +45,7 @@ export function MaturityAssessment() {
     .join(" ");
 
   const maturityLabel =
-    avg <= 1.5 ? "Inicial" : avg <= 2.5 ? "En Desarrollo" : avg <= 3.5 ? "Intermedio" : avg <= 4.5 ? "Avanzado" : "Lider Digital";
+    avg <= 1.5 ? "Inicial" : avg <= 2.5 ? "En Desarrollo" : avg <= 3.5 ? "Intermedio" : avg <= 4.5 ? "Avanzado" : "Líder Digital";
 
   if (!showResult) {
     const dim = dimensions[step];
@@ -69,7 +69,7 @@ export function MaturityAssessment() {
               onClick={() => setScores({ ...scores, [dim.id]: l.value })}
               className={`py-3 text-xs font-semibold border transition-all ${
                 scores[dim.id] === l.value
-                  ? "bg-accent text-white border-accent"
+                  ? "bg-accent text-primary border-accent"
                   : "bg-surface text-primary border-border hover:border-accent"
               }`}
             >
@@ -162,8 +162,8 @@ export function MaturityAssessment() {
         <div>
           <div className="mb-6">
             <p className="text-xs uppercase tracking-wider text-text-muted mb-1">Nivel general</p>
-            <p className="text-3xl font-heading font-bold text-accent">{maturityLabel}</p>
-            <p className="text-sm text-text-muted">Puntuacion: {avg.toFixed(1)} / 5.0</p>
+            <p className="text-3xl font-heading font-bold text-primary">{maturityLabel}</p>
+            <p className="text-sm text-text-muted">Puntuación: {avg.toFixed(1)} / 5.0</p>
           </div>
 
           <div className="space-y-3">

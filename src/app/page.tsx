@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, BarChart3, Target, TrendingUp, Brain, CheckCircle, GraduationCap, Award, BookOpen, Globe, Quote, ChevronDown, Users, Briefcase, LineChart, Clock } from "lucide-react";
+import { ArrowRight, BarChart3, Target, TrendingUp, Brain, CheckCircle, GraduationCap, Award, BookOpen, Globe, ChevronDown, Users, Briefcase, LineChart, Clock } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ROICalculator } from "@/components/demos/ROICalculator";
-import { BackgroundPattern } from "@/components/BackgroundPattern";
-import { FloatingParticles } from "@/components/FloatingParticles";
-import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FadeIn } from "@/components/FadeIn";
+import { BookSismico } from "@/components/BookSismico";
 import { getBlogPosts } from "@/lib/blog";
 
 const services = [
@@ -18,103 +16,95 @@ const services = [
   },
   {
     icon: TrendingUp,
-    title: "Transformacion Digital",
+    title: "Transformación Digital",
     href: "/consultoria/transformacion-digital",
     description:
-      "Hoja de ruta para llevar a tu empresa al siguiente nivel digital con vision estrategica.",
+      "Hoja de ruta para llevar a tu empresa al siguiente nivel digital con visión estratégica.",
   },
   {
     icon: BarChart3,
     title: "Estrategia Digital",
     href: "/consultoria/estrategia-digital",
     description:
-      "Alineacion de tecnologia, procesos y personas para maximizar el impacto digital en tu negocio.",
+      "Alineación de tecnología, procesos y personas para maximizar el impacto digital en tu negocio.",
   },
   {
     icon: Brain,
     title: "Inteligencia Artificial",
     href: "/consultoria/inteligencia-artificial",
     description:
-      "Implementacion de IA para automatizar procesos, analizar datos y tomar mejores decisiones.",
+      "Implementación de IA para automatizar procesos, analizar datos y tomar mejores decisiones.",
   },
 ];
 
 const credentials = [
-  { icon: GraduationCap, title: "MBA Transformacion Digital", subtitle: "IEBS, Espana" },
-  { icon: GraduationCap, title: "Maestria Analitica", subtitle: "EGADE Business School" },
+  { icon: GraduationCap, title: "MBA Transformación Digital", subtitle: "IEBS, España" },
+  { icon: GraduationCap, title: "Maestría Analítica", subtitle: "EGADE Business School" },
   { icon: Globe, title: "Micromaster", subtitle: "Boston University" },
-  { icon: Award, title: "7+ Certificaciones", subtitle: "Analitica Digital" },
-  { icon: BookOpen, title: "Profesor de Catedra", subtitle: "Tec de Monterrey" },
+  { icon: Award, title: "7+ Certificaciones", subtitle: "Analítica Digital" },
+  { icon: BookOpen, title: "Profesor de Cátedra", subtitle: "Tec de Monterrey" },
 ];
 
 const differentiators = [
   {
     title: "Estratega, No Ejecutor",
-    description: "Diseño la estrategia completa. No vendo tacticas sueltas — construyo el plan que conecta marketing, datos y resultados de negocio.",
+    description: "Diseño la estrategia completa. No vendo tácticas sueltas. Construyo el plan que conecta marketing, datos y resultados de negocio.",
   },
   {
     title: "Datos Sobre Opiniones",
-    description: "Cada recomendacion esta respaldada por analitica. GA4, CRM, dashboards — decisiones basadas en evidencia, no en intuicion.",
+    description: "Cada recomendación está respaldada por analítica. GA4, CRM, dashboards. Decisiones basadas en evidencia, no en intuición.",
   },
   {
     title: "Par del C-Suite",
-    description: "Hablo el idioma de directores y CEOs. Formacion de EGADE, Boston University y IEBS aplicada al mercado mexicano.",
+    description: "Hablo el idioma de directores y CEOs. Formación de EGADE, Boston University y IEBS aplicada al mercado mexicano.",
   },
 ];
 
-const institutions = [
-  "EGADE Business School",
-  "Boston University",
-  "IEBS Espana",
-  "Wharton (EdX)",
-  "Tec de Monterrey",
+const onlineCreds = [
+  "Boston University · MicroMasters (edX)",
+  "Wharton (edX)",
+  "TU Munich (edX)",
   "Google",
 ];
 
 const stats = [
-  { number: 50, suffix: "+", label: "Empresas Asesoradas", icon: Briefcase },
-  { number: 12, suffix: "+", label: "Anos de Experiencia", icon: Clock },
-  { number: 54, suffix: "", label: "Articulos Publicados", icon: BookOpen },
+  { number: 40, suffix: "+", label: "Empresas Asesoradas", icon: Briefcase },
+  { number: 7, suffix: "+", label: "Años de Experiencia", icon: Clock },
+  { number: 54, suffix: "", label: "Artículos Publicados", icon: BookOpen },
   { number: 7, suffix: "+", label: "Certificaciones", icon: Award },
 ];
 
-const testimonials = [
+const results = [
   {
-    quote: "Miguel nos ayudo a estructurar toda nuestra estrategia digital. En 6 meses pasamos de no tener presencia online a generar leads consistentes.",
-    name: "Director General",
-    company: "Empresa Industrial, Monterrey",
-    initials: "DG",
+    result: "De cero presencia digital a generación constante de leads en 6 meses.",
+    context: "Empresa industrial, Monterrey",
   },
   {
-    quote: "Su enfoque estrategico es lo que lo diferencia. No te vende tacticas, te ayuda a pensar como CEO digital.",
-    name: "VP de Marketing",
-    company: "Empresa de Servicios, CDMX",
-    initials: "VP",
+    result: "Estrategia digital estructurada de punta a punta, con métricas claras de negocio.",
+    context: "Empresa de servicios, CDMX",
   },
   {
-    quote: "La implementacion de IA en nuestros procesos comerciales redujo el tiempo de analisis de semanas a horas. Miguel hizo la diferencia.",
-    name: "CEO",
-    company: "Empresa de Tecnologia, Guadalajara",
-    initials: "CE",
+    result: "Análisis comercial reducido de semanas a horas con implementación de IA.",
+    context: "Empresa de tecnología, Guadalajara",
   },
 ];
 
 const faqs = [
   {
-    q: "¿Que tipo de empresas asesoras?",
-    a: "Trabajo principalmente con empresas medianas B2B en Mexico — industria, servicios profesionales, tecnologia. Mi cliente tipico tiene equipo de ventas y quiere profesionalizar su marketing digital.",
+    q: "¿Qué tipo de empresas asesoras?",
+    a: "Trabajo principalmente con empresas medianas B2B en México, sobre todo industria, servicios profesionales y tecnología. Mi cliente típico tiene equipo de ventas y quiere profesionalizar su marketing digital.",
   },
   {
-    q: "¿Cual es la diferencia entre consultoria y agencia?",
-    a: "Una agencia ejecuta tacticas. Yo diseño la estrategia completa: que hacer, por que, en que orden, con que metricas. Despues superviso la ejecucion, ya sea con tu equipo interno o con mi agencia De Marketing.",
+    q: "¿Cuál es la diferencia entre consultoría y agencia?",
+    a: "Una agencia ejecuta tácticas. Yo diseño la estrategia completa: qué hacer, por qué, en qué orden, con qué métricas. Después superviso la ejecución, ya sea con tu equipo interno o con mi agencia De Marketing.",
   },
   {
-    q: "¿Como funciona la primera consulta?",
-    a: "Agendas una llamada de 30 minutos sin compromiso. Revisamos donde esta tu empresa hoy, identificamos oportunidades rapidas y definimos si tiene sentido trabajar juntos.",
+    q: "¿Cómo funciona la primera consulta?",
+    a: "Agendas una llamada de 30 minutos sin compromiso. Revisamos dónde está tu empresa hoy, identificamos oportunidades rápidas y definimos si tiene sentido trabajar juntos.",
   },
   {
     q: "¿Trabajas con empresas fuera de Monterrey?",
-    a: "Si. Trabajo con empresas en todo Mexico y Latinoamerica de forma remota. Las reuniones son por videollamada y la comunicacion es asincrona con herramientas digitales.",
+    a: "Sí. Trabajo con empresas en todo México y Latinoamérica de forma remota. Las reuniones son por videollamada y la comunicación es asíncrona con herramientas digitales.",
   },
 ];
 
@@ -138,50 +128,101 @@ export default function Home() {
       />
       {/* Hero */}
       <section className="relative bg-surface overflow-hidden">
-        <AnimatedBackground variant="grid" />
-        <FloatingParticles count={25} />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <FadeIn>
-            <span className="section-badge">Miguel Cantu — Consultor Estrategico</span>
+            <span className="section-badge">Miguel Cantú</span>
             <h1 className="mb-4">Decisiones Digitales que Mueven Negocios</h1>
             <p className="mb-8 max-w-lg text-base leading-relaxed text-text-muted">
-              Miguel Cantú — fundador de De Marketing y Kuldu Café, autor del Método
-              Sísmico. Estrategia con datos para la alta dirección.
+              Consultor de negocios en estrategia digital, inteligencia artificial
+              y marketing digital. Estrategia con datos para la alta dirección.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contacto" className="btn btn-primary">
-                Agendar Consulta
+                Agendar diagnóstico
                 <ArrowRight size={16} />
               </Link>
               <Link href="/sobre-mi" className="btn btn-outline">
                 Mi Trayectoria
               </Link>
             </div>
+
+            {/* Authority strip: founder / author proof with links */}
+            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-4 border-t border-border pt-6">
+              <span className="text-[11px] font-semibold uppercase tracking-widest text-text-muted">
+                Detrás de
+              </span>
+              <a
+                href="https://demarketing.mx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-extrabold uppercase tracking-[2px] text-primary transition-opacity hover:opacity-70"
+              >
+                De Marketing
+              </a>
+              <span className="h-4 w-px bg-border" aria-hidden="true" />
+              <a
+                href="https://kuldu.cafe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-extrabold uppercase tracking-[2px] text-primary transition-opacity hover:opacity-70"
+              >
+                Kuldu Café
+              </a>
+              <span className="h-4 w-px bg-border" aria-hidden="true" />
+              <span className="inline-flex items-center gap-2 text-sm font-extrabold uppercase tracking-[2px] text-primary">
+                Método Sísmico
+                <span className="rounded-sm bg-accent-light px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary">
+                  Próximamente
+                </span>
+              </span>
+            </div>
           </FadeIn>
 
           <FadeIn delay={0.2} direction="right">
             <div className="relative">
-              <div className="aspect-[4/3] overflow-hidden rounded-lg shadow-2xl ring-1 ring-black/10">
+              <div className="aspect-[5/6] overflow-hidden rounded-lg shadow-2xl ring-1 ring-black/10">
                 <img
                   src="/miguel-hero.webp"
-                  alt="Miguel Cantu - Consultor de Transformacion Digital"
-                  className="h-full w-full object-cover"
+                  alt="Miguel Cantú - Consultor de Transformación Digital"
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
-              <div className="absolute -bottom-3 -left-3 h-20 w-20 rounded-lg bg-accent shadow-lg" />
+              {/* Libro El Método Sísmico — 3D (misma portada que sismico.demarketing.mx) */}
+              <div className="absolute -bottom-6 left-2 w-28 sm:left-4 md:-bottom-10 md:-left-10 md:w-48">
+                <BookSismico />
+              </div>
               <div className="absolute -top-3 -right-3 h-16 w-16 rounded-lg bg-primary/10 shadow-sm" />
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Logo Bar / Institutional Trust */}
-      <section className="bg-primary px-6 py-6">
-        <div className="mx-auto max-w-[1200px]">
-          <p className="text-center text-[10px] font-semibold uppercase tracking-widest text-white/30 mb-4">Formacion y credenciales de</p>
-          <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap">
-            {institutions.map((inst) => (
-              <span key={inst} className="text-xs font-semibold text-white/50 whitespace-nowrap">{inst}</span>
+      {/* Formación: títulos de posgrado (logos) + certificaciones en línea (texto) */}
+      <section className="bg-primary px-6 py-8">
+        <div className="mx-auto max-w-[1000px]">
+          <p className="text-center text-[10px] font-semibold uppercase tracking-widest text-white/30 mb-6">
+            Formación de posgrado y certificaciones en línea
+          </p>
+          <div className="flex items-center justify-center gap-10 md:gap-14 flex-wrap mb-7">
+            <img
+              src="/logos/tec-logo.png"
+              alt="Tecnológico de Monterrey"
+              className="h-11 md:h-12 w-auto object-contain opacity-70 brightness-0 invert"
+            />
+            <img
+              src="/logos/logo-iebs.png"
+              alt="IEBS Business School"
+              className="h-7 md:h-8 w-auto object-contain opacity-70 brightness-0 invert"
+            />
+            <img
+              src="/logos/egadelogo.webp"
+              alt="EGADE Business School"
+              className="h-14 md:h-16 w-auto object-contain opacity-70 brightness-0 invert"
+            />
+          </div>
+          <div className="flex items-center justify-center gap-x-8 gap-y-3 flex-wrap border-t border-white/10 pt-6">
+            {onlineCreds.map((c) => (
+              <span key={c} className="text-xs font-semibold text-white/45 whitespace-nowrap">{c}</span>
             ))}
           </div>
         </div>
@@ -192,9 +233,11 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((s, i) => (
             <FadeIn key={s.label} delay={i * 0.1}>
-              <div className="text-center">
-                <s.icon size={24} className="mx-auto mb-3 text-primary" strokeWidth={1.5} />
-                <AnimatedCounter end={s.number} suffix={s.suffix} label={s.label} />
+              <div className="flex items-center justify-center gap-3">
+                <s.icon size={40} className="shrink-0 text-primary" strokeWidth={2.25} />
+                <div className="text-left">
+                  <AnimatedCounter end={s.number} suffix={s.suffix} label={s.label} />
+                </div>
               </div>
             </FadeIn>
           ))}
@@ -203,16 +246,14 @@ export default function Home() {
 
       {/* Services */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="grid" />
-        <FloatingParticles count={15} color="primary" />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="section-badge">Consultoria</span>
-              <h2>Areas de Especializacion</h2>
+              <span className="section-badge">Consultoría</span>
+              <h2>Áreas de Especialización</h2>
               <p className="mt-4 mx-auto max-w-lg text-text-muted">
-                Consultoria estrategica en las areas que mas impacto generan en
-                la transformacion digital de tu empresa.
+                Consultoría estratégica en las áreas que más impacto generan en
+                la transformación digital de tu empresa.
               </p>
             </div>
           </FadeIn>
@@ -224,7 +265,7 @@ export default function Home() {
                   <h3 className="mb-3 text-lg">{s.title}</h3>
                   <p className="text-sm leading-relaxed text-text-muted">{s.description}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                    Ver mas <ArrowRight size={12} />
+                    Ver más <ArrowRight size={12} />
                   </span>
                 </Link>
               </FadeIn>
@@ -233,36 +274,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials — social proof right after claims */}
+      {/* Client results - outcomes, not quotes */}
       <section className="relative bg-surface px-6 py-20 overflow-hidden">
-        <FloatingParticles count={8} />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="section-badge">Testimonios</span>
-              <h2>Lo que Dicen mis Clientes</h2>
+              <span className="section-badge">Resultados</span>
+              <h2>Resultados de Clientes</h2>
               <p className="mt-4 mx-auto max-w-lg text-text-muted">
-                Empresas que profesionalizaron su estrategia digital con consultoria basada en datos.
+                Empresas que profesionalizaron su estrategia digital con consultoría basada en datos.
               </p>
             </div>
           </FadeIn>
           <div className="grid gap-8 md:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <FadeIn key={t.initials} delay={i * 0.1}>
+            {results.map((r, i) => (
+              <FadeIn key={r.context} delay={i * 0.1}>
                 <div className="card-hover h-full flex flex-col">
-                  <Quote size={24} className="mb-4 text-primary/30" strokeWidth={1.5} />
-                  <blockquote className="flex-1 text-sm leading-relaxed text-text-muted mb-6">
-                    &ldquo;{t.quote}&rdquo;
-                  </blockquote>
-                  <div className="flex items-center gap-3 pt-4 border-t border-border">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      {t.initials}
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-primary">{t.name}</p>
-                      <p className="text-xs text-text-muted">{t.company}</p>
-                    </div>
-                  </div>
+                  <TrendingUp size={24} className="mb-4 text-primary/30" strokeWidth={1.5} />
+                  <p className="flex-1 text-base font-semibold leading-relaxed text-primary mb-6">
+                    {r.result}
+                  </p>
+                  <p className="pt-4 border-t border-border text-xs uppercase tracking-wider text-text-muted">
+                    {r.context}
+                  </p>
                 </div>
               </FadeIn>
             ))}
@@ -270,24 +304,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Me / Differentiators — replaces old "Certified Knowledge" */}
+      {/* Why Me / Differentiators - replaces old "Certified Knowledge" */}
       <section className="section-navy relative px-6 py-20 overflow-hidden">
-        <FloatingParticles count={12} color="accent" />
         <div className="relative mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2">
           <FadeIn direction="left">
             <div className="aspect-[4/3] overflow-hidden rounded-lg shadow-xl ring-1 ring-white/10">
               <img
                 src="/miguel-knowledge.webp"
-                alt="Miguel Cantu en conferencia de consultoria"
+                alt="Miguel Cantú en conferencia de consultoría"
                 className="h-full w-full object-cover"
               />
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <span className="section-badge section-badge-white">Por Que Yo</span>
-            <h2 className="mb-6">No Soy una Agencia. Soy tu Estratega Digital.</h2>
+            <span className="section-badge section-badge-white">Por Qué Yo</span>
+            <h2 className="mb-6">Lo que Enseño en el Tec, Aplicado a tu Negocio</h2>
             <p className="mb-8 text-white/60">
-              Trabajo directamente con directores y CEOs. Sin intermediarios, sin juniors, sin reportes genericos.
+              Soy profesor de cátedra en el Tec de Monterrey. Llevo el mismo rigor
+              que enseño en el aula, marcos probados, evidencia y método, a las
+              decisiones digitales de tu empresa.
             </p>
             <div className="space-y-6">
               {differentiators.map((d, i) => (
@@ -308,16 +343,16 @@ export default function Home() {
 
       {/* ROI Calculator */}
       <section className="relative px-6 py-20 overflow-hidden">
-        <AnimatedBackground variant="grid" />
-        <FloatingParticles count={10} />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="text-center mb-10">
-              <span className="section-badge">Herramienta Interactiva</span>
-              <h2>Calcula el Retorno de tu Inversion en Marketing Digital</h2>
+              <span className="section-badge">Herramienta Educativa</span>
+              <h2>¿Tu Adquisición de Clientes es Rentable?</h2>
               <p className="mt-4 mx-auto max-w-lg text-text-muted">
-                Selecciona tu industria y presupuesto mensual para estimar leads,
-                clientes nuevos y retorno de inversion esperado.
+                Toda empresa debería saber calcular esto. Mide lo que te cuesta
+                adquirir un cliente (publicidad más agencia, sin el costo de tu
+                producto) y compáralo contra lo que ese cliente deja con el tiempo.
+                Esa relación decide si tu marketing crece o quema dinero.
               </p>
             </div>
           </FadeIn>
@@ -329,15 +364,14 @@ export default function Home() {
 
       {/* Blog Preview */}
       <section className="relative bg-surface px-6 py-20 overflow-hidden">
-        <FloatingParticles count={8} />
         <div className="relative mx-auto max-w-[1200px]">
           <FadeIn>
             <div className="flex items-end justify-between mb-14">
               <div>
                 <span className="section-badge">Blog</span>
-                <h2>Articulos Recientes</h2>
+                <h2>Artículos Recientes</h2>
                 <p className="mt-4 max-w-lg text-text-muted">
-                  Estrategia digital, marketing, IA y transformacion de negocios.
+                  Estrategia digital, marketing, IA y transformación de negocios.
                 </p>
               </div>
               <Link href="/blog" className="hidden md:inline-flex btn btn-outline text-sm">
@@ -370,7 +404,7 @@ export default function Home() {
           </div>
           <div className="mt-8 text-center md:hidden">
             <Link href="/blog" className="btn btn-outline text-sm">
-              Ver todos los articulos <ArrowRight size={14} />
+              Ver todos los artículos <ArrowRight size={14} />
             </Link>
           </div>
         </div>
@@ -405,19 +439,17 @@ export default function Home() {
 
       {/* CTA - Different visual from footer */}
       <section className="relative px-6 py-24 overflow-hidden">
-        <AnimatedBackground variant="grid" />
-        <FloatingParticles count={18} />
         <div className="relative mx-auto max-w-[800px] text-center">
           <FadeIn>
             <span className="section-badge">Hablemos</span>
             <h2 className="mb-6">¿Listo para Crecer con Estrategia Digital?</h2>
             <p className="mx-auto mb-10 max-w-lg text-text-muted leading-relaxed">
-              Agenda una consulta sin compromiso. Hablemos de donde esta tu
-              empresa hoy y disenemos juntos el camino hacia donde quieres llegar.
+              Agenda un diagnóstico sin compromiso. Hablemos de dónde está tu
+              empresa hoy y diseñemos juntos el camino hacia donde quieres llegar.
             </p>
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link href="/contacto" className="btn btn-primary">
-                Agendar Consulta
+                Agendar diagnóstico
                 <ArrowRight size={16} />
               </Link>
               <Link href="/sobre-mi" className="btn btn-outline">
