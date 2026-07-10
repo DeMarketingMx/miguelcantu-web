@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import matter from "gray-matter";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -8,6 +9,10 @@ const BLOG_DIR = path.join(ROOT, "content", "blog");
 const BASE_URL = "https://www.miguelcantu.mba";
 
 const today = new Date().toISOString().slice(0, 10);
+// Publicacion programada: no incluir en el sitemap entradas con fecha futura
+// (aun no existen como pagina y darian 404). Espejo del filtro en src/lib/blog.ts.
+const showFuture = process.env.SHOW_FUTURE_POSTS === "true";
+const now = Date.now();
 
 // Static pages
 const staticPages = [
@@ -23,10 +28,17 @@ const staticPages = [
 
 // Blog posts
 const blogFiles = fs.readdirSync(BLOG_DIR).filter(f => f.endsWith(".mdx") || f.endsWith(".md"));
-const blogPages = blogFiles.map(f => {
-  const slug = f.replace(/\.mdx?$/, "");
-  return { url: `/blog/${slug}`, priority: "0.7", changefreq: "monthly" };
-});
+const blogPages = blogFiles
+  .filter(f => {
+    if (showFuture) return true;
+    const { data } = matter(fs.readFileSync(path.join(BLOG_DIR, f), "utf-8"));
+    if (!data.date) return true;
+    return new Date(data.date).getTime() <= now;
+  })
+  .map(f => {
+    const slug = f.replace(/\.mdx?$/, "");
+    return { url: `/blog/${slug}`, priority: "0.7", changefreq: "monthly" };
+  });
 
 const allPages = [...staticPages, ...blogPages];
 
