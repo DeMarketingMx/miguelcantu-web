@@ -93,7 +93,16 @@ export function getBlogPosts(): BlogPost[] {
     };
   });
 
-  return posts.sort((a, b) => {
+  // Publicacion programada: en build, ocultar entradas con fecha futura.
+  // Un rebuild diario (deploy hook de CF Pages) revela la entrada cuyo dia llego.
+  // SHOW_FUTURE_POSTS=true permite previsualizar el calendario completo en local.
+  const showFuture = process.env.SHOW_FUTURE_POSTS === "true";
+  const now = Date.now();
+  const published = showFuture
+    ? posts
+    : posts.filter((p) => !p.dateISO || new Date(p.dateISO).getTime() <= now);
+
+  return published.sort((a, b) => {
     const dateA = new Date(a.date).getTime() || 0;
     const dateB = new Date(b.date).getTime() || 0;
     return dateB - dateA;

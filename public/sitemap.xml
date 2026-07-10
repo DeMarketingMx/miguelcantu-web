@@ -73,7 +73,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/agentes-de-ia-que-son-y-como-se-diferencian-de-un-chatbot</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/analisis-de-competencia-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/analisis-foda-como-hacerlo-bien</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -97,7 +109,61 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/atribucion-de-marketing-explicada</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/automatizacion-de-procesos-con-ia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/balanced-scorecard-explicado</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/benchmarking-como-compararte-sin-copiar</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/business-model-canvas-paso-a-paso</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/buyer-persona-paso-a-paso</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/cac-y-cltv-los-numeros-que-deciden-tu-rentabilidad</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/cadena-de-valor-de-porter</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/caracteristicas-de-tik-tok</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/chatgpt-para-negocios-casos-de-uso</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -115,7 +181,169 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/como-armar-un-calendario-de-contenidos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-atraer-y-retener-talento-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-capacitar-a-tu-equipo-en-ia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-construir-un-embudo-de-demanda</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-construir-una-hoja-de-ruta-de-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-crear-una-cultura-de-datos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-dar-retroalimentacion-efectiva</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-definir-a-tu-cliente-ideal-icp</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-desarrollar-a-tu-sucesor</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-elegir-herramientas-de-ia-para-tu-empresa</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-elegir-una-agencia-de-marketing</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-formar-un-equipo-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-hacer-un-plan-de-negocio</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-liderar-la-transformacion-digital-desde-la-direccion</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-medir-el-retorno-de-la-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-medir-el-roi-de-un-proyecto-de-ia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-presupuestar-tu-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-tomar-mejores-decisiones-sesgos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/como-una-pyme-puede-empezar-a-usar-ia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/copilotos-de-ia-en-el-trabajo</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/crecimiento-organico-vs-inorganico</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/cuales-son-los-servicios-de-marketing-digital-de-agencias</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/cultura-digital-la-tecnologia-es-solo-el-veinte-por-ciento</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/de-la-estrategia-a-la-ejecucion</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/de-la-intuicion-a-los-datos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/del-experto-tecnico-a-lider-de-personas</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/delegar-sin-perder-el-control</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/design-thinking-para-resolver-problemas-de-negocio</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -127,7 +355,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/digitalizacion-vs-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/e-business-y-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/el-error-numero-uno-al-digitalizar-una-empresa</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/el-lider-en-la-era-de-la-inteligencia-artificial</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -151,7 +397,97 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/email-marketing-sigue-vivo</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/entornos-vuca-y-bani-nuevas-formas-de-enteder-el-mundo</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/estrategia-de-precios-para-pymes</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/estrategia-del-oceano-azul-para-pymes</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/etica-y-riesgos-de-la-ia-en-la-empresa</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/gestion-del-cambio-por-que-la-gente-resiste-la-tecnologia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/gestion-del-tiempo-para-directivos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/gobernanza-de-ia-politicas-para-tu-empresa</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/google-ads-cuando-vale-la-pena</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/hoja-de-ruta-de-ia-para-directores</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/ia-en-marketing-tareas-que-puedes-automatizar</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/ia-en-ventas-como-acortar-tu-ciclo-de-cierre</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/ia-generativa-vs-ia-tradicional</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/ia-para-analisis-de-datos-en-pymes</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/ia-y-atencion-al-cliente-chatbots-que-si-resuelven</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/inbound-marketing-que-es-y-como-empezar</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -163,13 +499,61 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/innovacion-continua-no-un-proyecto-unico</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/integracion-de-sistemas-por-que-tus-datos-viven-en-islas</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/inteligencia-emocional-para-lideres</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/la-era-digital-en-mexico</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/la-experiencia-del-cliente-como-motor-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/la-ia-reemplazara-tu-trabajo</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/la-inteligencia-artifical-ya-llego-como-te-estas-preparando</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/la-mentalidad-de-crecimiento-en-la-empresa</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/landing-pages-que-convierten</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/las-cinco-fuerzas-de-porter</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -193,7 +577,49 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/liderar-la-adopcion-de-nueva-tecnologia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/liderazgo-remoto-e-hibrido</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/los-kpis-que-si-miden-tu-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/madurez-digital-en-que-etapa-esta-tu-empresa</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/manejo-de-redes-sociales</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/marca-personal-para-directivos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/marketing-b2b-vs-b2c</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/marketing-de-contenidos-con-estrategia</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -223,7 +649,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/matriz-bcg-para-tu-portafolio</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/matriz-de-ansoff</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/matriz-impacto-esfuerzo-para-priorizar</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/mercadotecnia-electronica-y-la-evolucion-de-los-negocios-electronicos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/meta-ads-para-principiantes</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -241,7 +691,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/metricas-de-vanidad-vs-metricas-de-negocio</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/miedo-a-cometer-errores-en-el-trabajo</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/mitos-sobre-la-inteligencia-artificial</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/modelo-7s-de-mckinsey</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -259,7 +727,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/nube-datos-y-automatizacion-tecnologias-que-habilitan-el-cambio</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/objetivos-de-la-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/okrs-vs-kpis</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -271,7 +751,49 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/pensamiento-estrategico-vs-operativo</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/planeacion-estrategica</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/planeacion-por-escenarios-ante-la-incertidumbre</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/procesos-antes-que-software</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/prompt-engineering-para-duenos-de-negocio</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/proposito-y-cultura-que-atrae-talento</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/propuesta-de-valor-que-se-entienda-en-diez-segundos</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/que-es-la-inteligencia-artificial-generativa</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -325,13 +847,49 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/quick-wins-de-transformacion-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/rag-explicado-con-un-ejemplo-de-negocio</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/remarketing-como-recuperar-clientes</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/reuniones-efectivas</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/semrush</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/seo-para-negocios-locales-en-mexico</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/shared-value-conscious-capitalism-csr</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/storytelling-de-marca-sb7</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -344,6 +902,18 @@
   </url>
   <url>
     <loc>https://www.miguelcantu.mba/blog/tipos-de-consultoria-de-negocio-como-elegir-el-consultor-adecuado</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/transformacion-digital-en-el-sector-servicios</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/transformacion-digital-en-empresas-familiares</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -367,7 +937,37 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.miguelcantu.mba/blog/tres-casos-de-transformacion-digital-en-mexico</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/tus-datos-son-el-combustible-de-la-ia</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/unit-economics-para-no-financieros</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.miguelcantu.mba/blog/valores-de-la-ciudadania-digital</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/ventaja-competitiva-que-es-y-como-defenderla</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.miguelcantu.mba/blog/video-marketing-para-pymes</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
