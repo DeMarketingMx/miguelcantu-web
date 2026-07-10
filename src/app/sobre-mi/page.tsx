@@ -257,7 +257,7 @@ export default function SobreMi() {
             {values.map((v, i) => (
               <FadeIn key={v.number} delay={i * 0.1}>
                 <div className="flex gap-5">
-                  <span className="font-heading text-4xl font-bold text-accent/20 leading-none">
+                  <span className="font-heading text-4xl font-bold text-primary/30 leading-none">
                     {v.number}
                   </span>
                   <div>
